@@ -1,0 +1,1273 @@
+{
+  "common": {
+    "login": "Войти",
+    "logout": "Выйти",
+    "register": "Регистрация",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "search": "Поиск",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "add": "Добавить",
+    "remove": "Удалить",
+    "close": "Закрыть",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Назад",
+    "submit": "Отправить",
+    "confirm": "Подтвердить",
+    "filter": "Фильтр",
+    "sort": "Сортировка",
+    "refresh": "Обновить",
+    "warning": "Предупреждение",
+    "info": "Информация",
+    "yes": "Да",
+    "no": "Нет",
+    "ok": "OK",
+    "retry": "Повторить",
+    "more": "Ещё",
+    "less": "Свернуть",
+    "viewAll": "Смотреть все",
+    "viewDetails": "Подробнее",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "download": "Скачать",
+    "upload": "Загрузить",
+    "copy": "Копировать",
+    "share": "Поделиться",
+    "print": "Печать",
+    "settings": "Настройки",
+    "help": "Помощь",
+    "actions": "Действия",
+    "status": "Статус",
+    "date": "Дата",
+    "name": "Название",
+    "description": "Описание",
+    "type": "Тип",
+    "from": "От",
+    "to": "До",
+    "total": "Всего"
+  },
+  "auth": {
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "email": "Email",
+    "loginTitle": "Вход в систему",
+    "registerTitle": "Регистрация",
+    "welcomeBack": "С возвращением",
+    "signInSubtitle": "Войдите в свою учётную запись, чтобы продолжить.",
+    "forgotPassword": "Забыли пароль?",
+    "invalidCredentials": "Не удалось войти. Проверьте имя пользователя и пароль.",
+    "footerHint": "Защищено JWT аутентификацией. Внутреннее использование.",
+    "heroTitle": "Система управления кафедрой ИТ",
+    "heroSubtitle": "Публикации, ККК, дедлайны и документы — единое рабочее пространство для преподавателей.",
+    "forgotPasswordDlg": {
+      "title": "Забыли пароль?",
+      "description": "Отправьте запрос — администратор сбросит пароль.",
+      "emailLabel": "Email",
+      "reasonLabel": "Причина",
+      "reasonPlaceholder": "Кратко: например, «Забыл пароль после отпуска»",
+      "submit": "Отправить запрос",
+      "cancel": "Отмена",
+      "success": "Запрос отправлен. Администратор свяжется с вами.",
+      "emailInvalid": "Введите корректный email.",
+      "reasonTooShort": "Причина должна быть не короче 5 символов."
+    }
+  },
+  "login": {
+    "sessionExpired": "Ваша сессия истекла. Войдите снова."
+  },
+  "nav": {
+    "dashboard": "Панель управления",
+    "myDocuments": "Мои документы",
+    "generatedDocuments": "Сгенерированные документы",
+    "allGeneratedDocuments": "Все сгенерированные документы",
+    "templatesLibrary": "Библиотека шаблонов",
+    "profile": "Профиль",
+    "statistics": "Статистика",
+    "teachers": "Преподаватели",
+    "passwordResets": "Сброс паролей",
+    "categories": "Категории",
+    "templates": "Управление шаблонами",
+    "activity": "История действий",
+    "notifications": "Уведомления",
+    "settings": "Настройки",
+    "robotRuns": "Запуски робота",
+    "publications": "Публикации",
+    "publicationsReview": "Проверка публикаций",
+    "kkkPreparation": "Подготовка к ККК",
+    "kkkSubmissions": "Заявки на ККК",
+    "deadlines": "Дедлайны",
+    "deadlinesManagement": "Управление дедлайнами",
+    "findSupervisor": "Поиск научного руководителя",
+    "messages": "Сообщения",
+    "users": "Поиск пользователей",
+    "adminDashboard": "Панель администратора",
+    "allReports": "Все отчёты",
+    "templateRequests": "Запросы шаблонов"
+  },
+  "dashboard": {
+    "title": "Дашборд",
+    "welcome": "Добро пожаловать",
+    "noUploadsYet": "Загрузок пока нет",
+    "greeting": {
+      "morning": "Доброе утро",
+      "afternoon": "Добрый день",
+      "evening": "Добрый вечер"
+    },
+    "kkkReadiness": "Готовность ККК",
+    "myPublications": "Мои публикации",
+    "myGenDocs": "Сгенерированные документы",
+    "myReports": "Мои отчёты",
+    "other": "Другое",
+    "lastUpload": "Последняя загрузка",
+    "pubsByYear": "Публикации по годам",
+    "last5Years": "Последние 5 лет",
+    "reportsActivity": "Активность по отчётам",
+    "last6Months": "Последние 6 месяцев",
+    "upcomingDeadlines": "Ближайшие дедлайны",
+    "recentNotifications": "Последние уведомления",
+    "templateUpdates": "Обновления шаблонов",
+    "noData": "Нет данных для отображения",
+    "noDeadlines": "Нет предстоящих дедлайнов",
+    "noNotifications": "Нет уведомлений",
+    "noTemplateUpdates": "Нет обновлений шаблонов за 30 дней"
+  },
+  "documents": {
+    "title": "Мои документы",
+    "addNew": "Добавить новый отчёт",
+    "status": {
+      "pending": "На проверке",
+      "approved": "Принят",
+      "rejected": "Отклонён",
+      "returned": "Возвращён на доработку"
+    }
+  },
+  "generatedDocuments": {
+    "title": "Сгенерированные документы",
+    "myDocuments": "Мои сгенерированные документы",
+    "allDocuments": "Все сгенерированные документы",
+    "emptyState": "Сгенерированных документов пока нет",
+    "deleteConfirm": "Вы уверены, что хотите удалить этот документ? Действие необратимо.",
+    "columns": {
+      "title": "Название",
+      "type": "Тип",
+      "source": "Источник Excel",
+      "date": "Дата генерации",
+      "status": "Статус",
+      "comment": "Комментарий",
+      "actions": "Действия",
+      "teacher": "Преподаватель",
+      "file": "Файл"
+    },
+    "types": {
+      "individualWorkload": "Инд. нагрузка",
+      "semesterWorkload": "Семестровая нагрузка",
+      "practiceSupervision": "Руководство практикой",
+      "diplomaSupervision": "Руководство дипломом",
+      "kkkDocument": "ККК документ",
+      "other": "Прочее"
+    },
+    "statuses": {
+      "generated": "Сгенерирован",
+      "uploaded": "Загружен",
+      "viewed": "Просмотрен",
+      "downloaded": "Скачан",
+      "needsReview": "Требует проверки",
+      "error": "Ошибка"
+    },
+    "actions": {
+      "download": "Скачать",
+      "view": "Просмотр",
+      "changeStatus": "Изменить статус",
+      "delete": "Удалить"
+    },
+    "filters": {
+      "teacher": "Все преподаватели",
+      "type": "Все типы",
+      "dateFrom": "Дата от",
+      "dateTo": "Дата до",
+      "sourceExcel": "Источник Excel...",
+      "status": "Все статусы"
+    }
+  },
+  "templatesLibrary": {
+    "title": "Библиотека шаблонов",
+    "subtitle": "Скачивайте актуальные шаблоны документов",
+    "search": "Поиск по названию...",
+    "uploadButton": "Управление шаблонами",
+    "download": "Скачать",
+    "downloadSuccess": "Файл загружен",
+    "downloadError": "Не удалось скачать файл",
+    "preview": {
+      "button": "Просмотр",
+      "title": "Предпросмотр",
+      "downloadInstead": "Скачать",
+      "notSupported": "Предпросмотр для этого типа файла недоступен. Скачайте файл для просмотра.",
+      "loadError": "Не удалось загрузить предпросмотр. Попробуйте скачать файл."
+    },
+    "noResults": "Шаблоны не найдены",
+    "noResultsHint": "Попробуйте изменить параметры фильтра",
+    "uploadedBy": "Загрузил",
+    "version": "Версия",
+    "downloadCount": "Скачиваний",
+    "lastUpdate": "Обновлён",
+    "filters": {
+      "year": "Все учебные годы",
+      "category": "Все категории",
+      "fileType": "Все типы файлов",
+      "status": "Все статусы"
+    },
+    "status": {
+      "active": "Активен",
+      "archived": "Архив",
+      "draft": "Черновик"
+    },
+    "semester": {
+      "fall": "Осень",
+      "spring": "Весна",
+      "summer": "Лето",
+      "all": "Весь год"
+    },
+    "category": {
+      "teachingWorkload": "Учебная нагрузка",
+      "kkkDocuments": "ККК документы",
+      "scientificReports": "Научные отчёты",
+      "serviceNotes": "Служебные записки",
+      "protocols": "Протоколы",
+      "practiceDocuments": "Практика",
+      "diplomaSupervision": "Дипломное руководство",
+      "qualificationDocuments": "Квалификационные документы",
+      "departmentForms": "Бланки кафедры",
+      "other": "Прочее"
+    }
+  },
+  "publications": {
+    "title": "Мои публикации",
+    "addPublication": "Добавить публикацию",
+    "editPublication": "Редактировать публикацию",
+    "emptyState": "Публикаций пока нет",
+    "addFirstPublication": "Добавьте вашу первую публикацию",
+    "tabs": {
+      "all": "Все",
+      "scopus": "Scopus",
+      "wos": "Web of Science",
+      "kokson": "КОКSON",
+      "other": "Прочие"
+    },
+    "filters": {
+      "type": "Тип",
+      "quartile": "Квартиль",
+      "doi": "DOI",
+      "status": "Статус",
+      "verified": "Проверено",
+      "needVerification": "Требует проверки",
+      "withConfirmationFile": "С файлом подтверждения",
+      "missingEvidence": "Без доказательств",
+      "withDoi": "С DOI",
+      "withoutDoi": "Без DOI"
+    },
+    "form": {
+      "title": "Название",
+      "authors": "Авторы",
+      "year": "Год публикации",
+      "journal": "Журнал / Конференция",
+      "publicationType": "Тип публикации",
+      "databaseType": "База данных",
+      "doi": "DOI",
+      "url": "URL",
+      "quartile": "Квартиль",
+      "percentile": "Перцентиль (0–100)",
+      "indexingStatus": "Статус индексирования"
+    },
+    "publicationTypes": {
+      "scopusJournal": "Журнал Scopus",
+      "scopusConference": "Конференция Scopus",
+      "wosArticle": "Статья WoS",
+      "koksonArticle": "Статья КОКSON",
+      "localJournal": "Местный журнал",
+      "conferencePaper": "Доклад конференции",
+      "patent": "Патент",
+      "certificate": "Свидетельство",
+      "other": "Прочее"
+    },
+    "databaseTypes": {
+      "scopus": "Scopus",
+      "webOfScience": "Web of Science",
+      "kokson": "КОКSON",
+      "other": "Прочее"
+    },
+    "statuses": {
+      "draft": "Черновик",
+      "submitted": "Отправлено",
+      "underReview": "На проверке",
+      "verified": "Проверено",
+      "rejected": "Отклонено",
+      "needsCorrection": "Требует исправления"
+    },
+    "quartiles": {
+      "q1": "Q1",
+      "q2": "Q2",
+      "q3": "Q3",
+      "q4": "Q4",
+      "none": "—"
+    },
+    "fileTypes": {
+      "pdfArticle": "PDF статьи",
+      "ottisk": "Оттиск",
+      "certificate": "Сертификат",
+      "journalPageScan": "Скан страницы журнала",
+      "doiConfirmation": "Подтверждение DOI",
+      "other": "Прочее"
+    },
+    "actions": {
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "submit": "Отправить на проверку",
+      "verify": "Подтвердить",
+      "reject": "Отклонить",
+      "needsCorrection": "Требует исправления",
+      "uploadFile": "Загрузить",
+      "downloadFile": "Скачать",
+      "deleteFile": "Удалить"
+    },
+    "aiExtract": {
+      "title": "Быстрое заполнение из PDF",
+      "dropZone": "Перетащите PDF сюда или нажмите для выбора",
+      "extractButton": "Извлечь метаданные",
+      "extracting": "Извлечение…",
+      "confidence": "Извлечено с уверенностью {{percent}}%",
+      "extracted": "Поля автозаполнены — проверьте перед сохранением",
+      "clear": "Очистить извлечённые данные",
+      "savePdfAsFile": "Сохранить этот PDF как файл статьи после создания публикации",
+      "error": "Не удалось извлечь метаданные из PDF",
+      "selectPdfFirst": "Сначала выберите PDF файл"
+    },
+    "aiSuggest": {
+      "button": "Подобрать поля AI",
+      "dialogTitle": "AI-подсказки для «{{journal}}»",
+      "applySelected": "Применить выбранные",
+      "confidence": "Уверенность: {{percent}}%",
+      "dismiss": "Отклонить",
+      "lowConfidence": "AI не нашёл надёжных данных для этого журнала",
+      "success": "Поля заполнены из AI-подсказок"
+    }
+  },
+  "robotRuns": {
+    "title": "Запуски робота",
+    "subtitle": "История автоматизации",
+    "latestRun": "Последний запуск",
+    "viewDetails": "Подробнее",
+    "noRuns": "Запусков робота пока не было",
+    "triggeredBy": "Запущен от",
+    "columns": {
+      "id": "ID",
+      "sourceFile": "Файл-источник",
+      "startedAt": "Начало",
+      "finishedAt": "Конец",
+      "duration": "Длительность",
+      "status": "Статус",
+      "processed": "Обработано",
+      "errors": "Ошибки",
+      "generated": "Создано"
+    },
+    "status": {
+      "running": "Выполняется",
+      "success": "Успешно",
+      "failed": "Ошибка",
+      "partial": "Частично"
+    },
+    "details": {
+      "title": "Детали запуска",
+      "errorLog": "Лог ошибок",
+      "summary": "Сводка",
+      "noErrors": "Ошибок не зафиксировано"
+    }
+  },
+  "admin": {
+    "robot": {
+      "upload": {
+        "title": "Загрузить Excel и запустить робота",
+        "dragHere": "Перетащите .xlsx сюда или",
+        "browse": "выберите файл",
+        "fileSelected": "Файл выбран",
+        "fileTooLarge": "Файл слишком большой (макс. 25 МБ)",
+        "invalidFormat": "Разрешены только файлы .xlsx",
+        "uploadButton": "Загрузить и запустить",
+        "uploading": "Запуск робота...",
+        "success": "Робот запущен — таблица обновится",
+        "error": "Не удалось запустить робота"
+      },
+      "statuses": {
+        "running": "Выполняется",
+        "success": "Успешно",
+        "partial": "Частично",
+        "failed": "Ошибка",
+        "rolledBack": "Откатан"
+      },
+      "actions": {
+        "viewDetails": "Подробнее",
+        "rollback": "Откатить"
+      },
+      "rollbackConfirm": {
+        "title": "Подтвердить откат",
+        "description": "Все документы этого запуска будут помечены как удалённые. Преподаватели получат уведомление. Действие нельзя отменить.",
+        "confirm": "Откатить",
+        "cancel": "Отмена"
+      },
+      "rollbackSuccess": "Запуск успешно откатан",
+      "rollbackError": "Ошибка отката",
+      "rolledBackAt": "Откатан"
+    }
+  },
+  "kkk": {
+    "title": "Подготовка к ККК",
+    "subtitle": "Сформируйте досье на квалификационную комиссию",
+    "adminTitle": "Заявки на ККК",
+    "completion": "готовность",
+    "submittedAt": "Подано",
+    "checkedAt": "Проверено",
+    "checklistTitle": "Чек-лист",
+    "missingInformation": "Не хватает информации",
+    "aiRecommendationsTitle": "Рекомендации ИИ",
+    "aiRecommendationsComingSoon": "Скоро — ИИ-ассистент проанализирует профиль и предложит улучшения.",
+    "publicationsTabHint": "Публикации управляются в отдельном разделе. Изменения там отражаются в чек-листе ККК.",
+    "status": {
+      "label": "Статус",
+      "transitionTo": "Перевести в",
+      "notStarted": "Не начато",
+      "inProgress": "В процессе",
+      "submitted": "Подано",
+      "checked": "Проверено",
+      "returnedForCorrection": "Возвращено на доработку",
+      "ready": "Готово"
+    },
+    "checklist": {
+      "profileCompleted": "Профиль заполнен",
+      "educationAdded": "Добавлено образование",
+      "workExperienceAdded": "Добавлен опыт работы",
+      "qualificationCoursesLast3Years": "Курсы повышения квалификации (3 года)",
+      "publicationsLast5Years": "Публикации (5 лет)",
+      "doiLinksAdded": "DOI для Scopus/WoS",
+      "confirmationFilesUploaded": "Подтверждающие файлы загружены",
+      "awardsPatentsAdded": "Награды или патенты",
+      "englishLevelAdded": "Уровень английского указан"
+    },
+    "checklistDescription": {
+      "profileCompleted": "Степень, должность, телефон, email, научные направления",
+      "educationAdded": "Хотя бы одна запись об образовании",
+      "workExperienceAdded": "Хотя бы одна запись об опыте работы",
+      "qualificationCoursesLast3Years": "Хотя бы один курс за последние 3 года",
+      "publicationsLast5Years": "Хотя бы одна публикация за последние 5 лет",
+      "doiLinksAdded": "У каждой Scopus/WoS публикации должен быть DOI",
+      "confirmationFilesUploaded": "Каждая публикация должна иметь подтверждающий файл",
+      "awardsPatentsAdded": "Опционально, но рекомендуется",
+      "englishLevelAdded": "Укажите уровень в профиле"
+    },
+    "tabs": {
+      "education": "Образование",
+      "workExperience": "Опыт работы",
+      "qualificationCourses": "Курсы повышения квалификации",
+      "awards": "Награды",
+      "patents": "Патенты",
+      "publications": "Публикации"
+    },
+    "forms": {
+      "education": {
+        "degree": "Степень",
+        "institution": "Учебное заведение",
+        "specialty": "Специальность",
+        "year": "Год"
+      },
+      "workExperience": {
+        "position": "Должность",
+        "organization": "Организация",
+        "startYear": "Год начала",
+        "endYear": "Год окончания",
+        "current": "Работаю сейчас",
+        "description": "Описание",
+        "present": "наст. время"
+      },
+      "qualificationCourses": {
+        "name": "Название курса",
+        "organization": "Организация",
+        "year": "Год",
+        "hours": "Часы",
+        "hoursShort": "ч",
+        "certificate": "Сертификат",
+        "noCertificate": "Сертификат не загружен"
+      },
+      "awards": {
+        "name": "Название",
+        "organization": "Организация",
+        "year": "Год",
+        "description": "Описание"
+      },
+      "patents": {
+        "title": "Название",
+        "patentNumber": "Номер патента",
+        "year": "Год",
+        "country": "Страна",
+        "description": "Описание"
+      }
+    },
+    "emptyStates": {
+      "education": "Записей об образовании пока нет.",
+      "workExperience": "Опыт работы пока не добавлен.",
+      "qualificationCourses": "Курсы повышения квалификации не добавлены.",
+      "awards": "Наград пока нет.",
+      "patents": "Патентов пока нет.",
+      "adminTable": "Нет заявок, соответствующих фильтрам.",
+      "generic": "Записей нет."
+    },
+    "actions": {
+      "submit": "Отправить на проверку",
+      "export": "Экспорт пакета ККК",
+      "exportPdf": "Экспорт PDF",
+      "exportSummary": "Экспорт сводки CSV",
+      "viewDetails": "Подробнее",
+      "markChecked": "Отметить как проверено",
+      "markReady": "Отметить как готово",
+      "returnForCorrection": "Вернуть на доработку",
+      "changeStatus": "Изменить статус",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "addNew": "Добавить",
+      "uploadCertificate": "Загрузить",
+      "downloadCertificate": "Скачать",
+      "goToSection": "Перейти"
+    },
+    "alerts": {
+      "lowCompletion": "Готовность {{value}}%. Минимум 80% для отправки.",
+      "alreadySubmitted": "Уже отправлено или готово.",
+      "returnedForCorrection": "Возвращено на доработку",
+      "submittedSuccess": "Отправлено на проверку.",
+      "exportFailed": "Не удалось экспортировать PDF.",
+      "confirmDelete": "Удалить эту запись?",
+      "fieldRequired": "Поле «{{field}}» обязательно.",
+      "reviewerComment": "Комментарий",
+      "commentPlaceholder": "Заметка для преподавателя (обязательно при возврате на доработку)"
+    },
+    "gettingStarted": {
+      "start": {
+        "eyebrow": "С чего начать",
+        "title": "Давайте оформим ваше досье ККК",
+        "description": "Начните с добавления образования и опыта работы. Весь процесс занимает около 30 минут.",
+        "buttonPrefix": "Начать с раздела «{{sectionName}}»"
+      },
+      "continue": {
+        "eyebrow": "Следующий шаг",
+        "title": "Продолжите с раздела «{{sectionName}}»",
+        "description": "Ваш следующий шаг — заполнить раздел «{{sectionName}}», чтобы открыть остальные пункты чек-листа.",
+        "buttonPrefix": "Продолжить с раздела «{{sectionName}}»"
+      },
+      "sections": {
+        "profile": "профиль",
+        "education": "Образование",
+        "workExperience": "Опыт работы",
+        "qualificationCourses": "Курсы повышения квалификации",
+        "publications": "Публикации",
+        "doiLinks": "Публикации с DOI",
+        "confirmationFiles": "Файлы публикаций",
+        "awards": "Награды и патенты",
+        "englishLevel": "Уровень английского"
+      }
+    },
+    "summary": {
+      "total": "Всего преподавателей",
+      "submitted": "Подано",
+      "ready": "Готово",
+      "returned": "Возвращено",
+      "avgCompletion": "Средняя готовность"
+    },
+    "filters": {
+      "search": "Поиск по имени или email...",
+      "status": "Статус",
+      "completionRange": "Диапазон готовности",
+      "sortBy": "Сортировка",
+      "sortCompletionDesc": "По готовности (убыв.)",
+      "sortSubmittedDesc": "По дате подачи (убыв.)"
+    },
+    "table": {
+      "teacher": "Преподаватель",
+      "completion": "Готовность",
+      "status": "Статус",
+      "submittedAt": "Подано",
+      "lastUpdate": "Обновлено",
+      "actions": "Действия"
+    },
+    "csv": {
+      "teacher": "Преподаватель",
+      "email": "Email",
+      "completion": "Готовность %",
+      "status": "Статус",
+      "submittedAt": "Дата подачи",
+      "checkedAt": "Дата проверки"
+    },
+    "tutor": {
+      "title": "Спросить ККК-наставника",
+      "badge": "AI",
+      "askPlaceholder": "Спросите о требованиях ККК...",
+      "send": "Отправить",
+      "clear": "Очистить чат",
+      "suggestedQuestions": {
+        "kkkRequirements": "Что мне нужно для подачи на ККК?",
+        "confirmDocs": "Какие документы нужны для подтверждения публикаций?",
+        "scopusCount": "Сколько Scopus публикаций мне нужно?",
+        "qualificationRequirements": "Какие требования к курсам повышения квалификации?"
+      },
+      "thinking": "Думаю...",
+      "error": "ККК-наставник временно недоступен. Попробуйте позже."
+    }
+  },
+  "profile": {
+    "subtitle": "Управление академическим профилем",
+    "avatar": "Аватар",
+    "avatarDescription": "Загрузите фото профиля",
+    "upload": "Загрузить",
+    "avatarSuccess": "Аватар успешно обновлён",
+    "saveSuccess": "Профиль сохранён",
+    "saveError": "Не удалось сохранить профиль",
+    "personalInfo": "Личная информация",
+    "personalInfoDescription": "Обновите контактные данные и сведения о себе",
+    "generateAiSummary": "Сгенерировать AI-резюме",
+    "generateAiSummaryHint": "Будет доступно в Phase 8c — ИИ проанализирует профиль и напишет резюме",
+    "manageInKkk": "Управлять в ККК",
+    "sections": {
+      "academicInfo": "Академическая информация",
+      "onlineProfiles": "Онлайн-профили",
+      "academicActivities": "Академическая деятельность",
+      "academicActivitiesDescription": "Предпросмотр академических данных. Управляйте записями в разделе Подготовка к ККК.",
+      "aiSummary": "AI-резюме",
+      "aiSummaryDescription": "Автоматически сгенерированное резюме профиля. Редактируйте вручную или обновляйте через ИИ."
+    },
+    "fields": {
+      "phone": "Телефон",
+      "office": "Кабинет",
+      "researchAreas": "Научные области",
+      "researchAreasHint": "Разделите запятой",
+      "publications": "Публикации",
+      "academicDegree": "Учёная степень",
+      "academicDegreePlaceholder": "например, к.ф.-м.н.",
+      "academicTitle": "Учёное звание",
+      "academicTitlePlaceholder": "например, Доцент",
+      "position": "Должность",
+      "positionPlaceholder": "например, Старший преподаватель",
+      "employmentRate": "Ставка",
+      "englishLevel": "Уровень английского",
+      "scopusAuthorId": "Scopus Author ID",
+      "orcid": "ORCID",
+      "googleScholar": "Google Scholar URL",
+      "aiSummary": "AI-резюме",
+      "aiSummaryPlaceholder": "Краткое академическое резюме..."
+    },
+    "englishLevels": {
+      "a1": "A1 – Начальный",
+      "a2": "A2 – Элементарный",
+      "b1": "B1 – Средний",
+      "b2": "B2 – Выше среднего",
+      "c1": "C1 – Продвинутый",
+      "c2": "C2 – Профессиональный",
+      "native": "Носитель",
+      "none": "Не указан"
+    },
+    "publicProfile": {
+      "section": "Публичный профиль",
+      "description": "Включите публичный URL, который любой может открыть без авторизации.",
+      "enableLabel": "Включить публичный профиль",
+      "customSlug": "Пользовательский URL (опционально)",
+      "slugHelp": "3–50 строчных букв, цифр, дефисов",
+      "publicUrl": "Ваш публичный URL",
+      "copy": "Скопировать",
+      "copied": "Скопировано!",
+      "view": "Открыть профиль",
+      "qrCode": "QR-код",
+      "downloadQr": "Скачать QR",
+      "enabled": "Публичный профиль включён",
+      "disabled": "Публичный профиль отключён",
+      "slugAvailable": "Slug доступен",
+      "slugTaken": "Slug уже занят",
+      "slugInvalid": "Неверный формат. Используйте 3–50 строчных букв, цифр, дефисов."
+    },
+    "cv": {
+      "exportButton": "Скачать CV (PDF)",
+      "downloading": "Генерация...",
+      "success": "CV скачано",
+      "error": "Не удалось сгенерировать CV"
+    },
+    "security": {
+      "section": "Безопасность",
+      "description": "Управление паролем и безопасностью учётной записи.",
+      "passwordLabel": "Пароль",
+      "passwordSubtitle": "Измените пароль, зная текущий.",
+      "changePassword": "Изменить пароль",
+      "changePasswordTitle": "Изменение пароля",
+      "currentPassword": "Текущий пароль",
+      "newPassword": "Новый пароль",
+      "confirmPassword": "Повторите новый пароль",
+      "passwordHint": "Минимум 8 символов",
+      "passwordChanged": "Пароль успешно изменён",
+      "passwordTooShort": "Пароль должен быть не менее 8 символов",
+      "passwordsDontMatch": "Пароли не совпадают",
+      "changeError": "Ошибка изменения пароля"
+    }
+  },
+  "deadlines": {
+    "title": "Академический календарь",
+    "managementTitle": "Управление дедлайнами",
+    "addDeadline": "Добавить дедлайн",
+    "editDeadline": "Редактировать дедлайн",
+    "emptyState": "Дедлайны не найдены",
+    "total": "дедлайнов",
+    "active": "Активен",
+    "inactive": "Неактивен",
+    "listView": "Список",
+    "calendarView": "Календарь",
+    "categories": {
+      "kkk": "ККК",
+      "scopus": "Scopus",
+      "quarterly_report": "Квартальный отчёт",
+      "semester_report": "Семестровый отчёт",
+      "workload_report": "Нагрузка",
+      "practice_report": "Отчёт по практике",
+      "accreditation": "Аккредитация",
+      "other": "Прочее"
+    },
+    "targetRoles": {
+      "all": "Все пользователи",
+      "teachers_only": "Только преподаватели",
+      "admins_only": "Только администраторы",
+      "specific_users": "Конкретные пользователи"
+    },
+    "repeatTypes": {
+      "one_time": "Однократно",
+      "monthly": "Ежемесячно",
+      "quarterly": "Ежеквартально",
+      "semester": "Каждый семестр",
+      "annual": "Ежегодно"
+    },
+    "form": {
+      "title": "Название",
+      "description": "Описание",
+      "date": "Дата дедлайна",
+      "category": "Категория",
+      "target": "Целевая аудитория",
+      "users": "Выбрать пользователей",
+      "repeat": "Повтор",
+      "active": "Активен"
+    },
+    "actions": {
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "notifyNow": "Отправить уведомления",
+      "toggleActive": "Переключить активность"
+    },
+    "table": {
+      "title": "Название",
+      "date": "Дата",
+      "category": "Категория",
+      "target": "Аудитория",
+      "repeat": "Повтор",
+      "active": "Статус",
+      "createdBy": "Создал",
+      "actions": "Действия"
+    },
+    "alerts": {
+      "daysLeft": "через {{count}} дн.",
+      "today": "Сегодня!",
+      "overdue": "Просрочен"
+    },
+    "deleteConfirm": "Удалить «{{title}}»? Это действие нельзя отменить."
+  },
+  "ai": {
+    "recommendations": {
+      "title": "AI-рекомендации",
+      "refresh": "Обновить AI-анализ",
+      "allRecommendations": "Все рекомендации",
+      "error": "Не удалось загрузить рекомендации. Попробуйте ещё раз.",
+      "allComplete": "Отлично — критичных пробелов в профиле нет. Так держать!",
+      "priority": {
+        "critical": "Критично",
+        "important": "Важно",
+        "niceToHave": "Желательно"
+      }
+    },
+    "summary": {
+      "generate": "Сгенерировать AI-резюме",
+      "generating": "Генерация...",
+      "save": "Сохранить",
+      "saved": "AI-резюме сохранено",
+      "lastGenerated": "Последнее обновление: {{date}}",
+      "hint": "AI-резюме помогает коллегам и студентам понять вашу экспертизу. Перед сохранением можно отредактировать.",
+      "error": "Не удалось сгенерировать резюме. Попробуйте ещё раз."
+    },
+    "generateDescription": {
+      "button": "✨ Сгенерировать с AI",
+      "generating": "Генерация...",
+      "success": "Описание сгенерировано",
+      "error": "Не удалось сгенерировать описание"
+    },
+    "assistant": {
+      "chatTitle": "AI-ассистент",
+      "poweredBy": "Работает на Groq",
+      "poweredByLong": "Работает на Groq Llama 3.3 70B · ⌘+Enter — отправить",
+      "newChat": "Новый чат",
+      "welcomeTitle": "Привет, {{name}}! Чем помочь?",
+      "welcomeDescription": "Спросите что угодно о KKK, дедлайнах, публикациях или работе системы.",
+      "suggestedQuestions": {
+        "kkkProgress": "Какой у меня прогресс по KKK?",
+        "deadlines": "Покажи мои ближайшие дедлайны",
+        "publicationsNeeded": "Сколько публикаций нужно для KKK?",
+        "whatNext": "Над чем мне поработать дальше?"
+      },
+      "placeholder": "Спросите что угодно…",
+      "send": "Отправить",
+      "sending": "Отправка…",
+      "copyMessage": "Копировать",
+      "copied": "Скопировано",
+      "deleteConversation": "Удалить разговор?",
+      "error": "Что-то пошло не так. Попробуйте ещё раз.",
+      "errorRetry": "Повторить",
+      "conversationsList": "Разговоры",
+      "noConversations": "Разговоров пока нет"
+    }
+  },
+  "userProfile": {
+    "about": "О себе"
+  },
+  "aiSearch": {
+    "title": "🤖 Найти шаблоны по описанию",
+    "placeholder": "Опишите, что вам нужно (например, «нужен шаблон для отчёта по практике»)",
+    "search": "AI-поиск",
+    "clear": "Очистить AI-результаты",
+    "suggestions": "AI-рекомендации",
+    "match": "совпадение",
+    "matchedKeywords": "Совпавшие ключевые слова",
+    "noResults": "Ничего не найдено по запросу. Попробуйте другие слова.",
+    "error": "Ошибка AI-поиска. Попробуйте ещё раз."
+  },
+  "findSupervisor": {
+    "title": "Поиск научного руководителя",
+    "subtitle": "Поиск преподавателей по научным интересам, публикациям и компетенциям",
+    "placeholder": "Опишите научный интерес (например, «машинное обучение, нейронные сети»)",
+    "quickTopics": "Популярные темы",
+    "viewProfile": "Открыть профиль",
+    "sendMessage": "Написать",
+    "relevantPublications": "Релевантные публикации",
+    "matchedFields": "Совпавшие поля",
+    "researchAreas": "Научные интересы",
+    "noResults": "Преподаватели не найдены по запросу. Попробуйте другие ключевые слова.",
+    "error": "Ошибка поиска. Попробуйте ещё раз.",
+    "fields": {
+      "researchAreas": "научные интересы",
+      "profileDescription": "профиль",
+      "position": "должность",
+      "publications": "публикации"
+    }
+  },
+  "sidebar": {
+    "departmentName": "Кафедра ИТ",
+    "teacherPortal": "Портал преподавателя",
+    "adminPanel": "Панель администратора",
+    "groups": {
+      "workspace": "Рабочее пространство",
+      "academic": "Академическое",
+      "peopleMessages": "Люди и сообщения",
+      "personal": "Личное",
+      "overview": "Обзор",
+      "contentManagement": "Управление контентом",
+      "academicReview": "Академические заявки",
+      "usersAccess": "Пользователи и доступ",
+      "automation": "Автоматизация"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Главная",
+    "admin": "Администрирование"
+  },
+  "unauthorized": {
+    "title": "Доступ запрещён",
+    "message": "У вас нет доступа к этой странице",
+    "goHome": "На главную"
+  },
+  "theme": {
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "corporate": "Корпоративная",
+    "highContrast": "Высокий контраст"
+  },
+  "notifications": {
+    "unreadCount": "{{count}} непрочитанных уведомления(й)",
+    "noUnread": "Нет непрочитанных уведомлений",
+    "markAllRead": "Отметить все как прочитанные",
+    "markedAllRead": "Все уведомления отмечены как прочитанные",
+    "markRead": "Отметить как прочитанное",
+    "delete": "Удалить",
+    "deleted": "Уведомление удалено",
+    "empty": "Нет уведомлений",
+    "viewAll": "Смотреть все уведомления",
+    "priorityHigh": "Важное",
+    "groups": {
+      "today": "Сегодня",
+      "yesterday": "Вчера",
+      "thisWeek": "На этой неделе",
+      "earlier": "Ранее"
+    },
+    "filters": {
+      "all": "Все",
+      "unread": "Непрочитанные",
+      "read": "Прочитанные",
+      "type": "По типу",
+      "clearAll": "Сбросить"
+    },
+    "types": {
+      "KKK_COLLECTION_STARTED": "Начат сбор ККК",
+      "KKK_STATUS_CHANGED": "Статус ККК изменён",
+      "SCOPUS_UPDATE_REQUIRED": "Требуется обновление Scopus",
+      "QUARTERLY_DEADLINE": "Квартальный дедлайн",
+      "SEMESTER_DEADLINE": "Семестровый дедлайн",
+      "DEADLINE_REMINDER": "Напоминание о дедлайне",
+      "DEADLINE_APPROACHING_WEEK": "Дедлайн через 7 дней",
+      "DEADLINE_APPROACHING_3DAYS": "Дедлайн через 3 дня",
+      "DEADLINE_TOMORROW": "Дедлайн завтра",
+      "DEADLINE_OVERDUE": "Дедлайн просрочен",
+      "TEMPLATE_UPDATED": "Шаблон обновлён",
+      "TEMPLATE_NEW": "Новый шаблон",
+      "GENERATED_DOCUMENT_UPLOADED": "Документ сгенерирован",
+      "REPORT_RETURNED": "Отчёт на доработке",
+      "REPORT_ACCEPTED": "Отчёт принят",
+      "REPORT_REJECTED": "Отчёт отклонён",
+      "NEW_ADMIN_COMMENT": "Новый комментарий администратора",
+      "ROBOT_COMPLETED": "Робот завершил работу",
+      "ROBOT_FAILED": "Ошибка робота",
+      "PUBLICATION_VERIFIED": "Публикация подтверждена",
+      "PUBLICATION_REJECTED": "Публикация отклонена",
+      "PUBLICATION_NEEDS_CORRECTION": "Публикация требует исправления",
+      "NEW_MESSAGE": "Новое сообщение",
+      "FRIENDSHIP_REQUEST": "Запрос в друзья",
+      "FRIENDSHIP_ACCEPTED": "Запрос в друзья принят"
+    }
+  },
+  "commandPalette": {
+    "placeholder": "Поиск по разделам, пользователям, шаблонам...",
+    "noResults": "Ничего не найдено",
+    "sections": {
+      "pages": "Разделы",
+      "teachers": "Преподаватели",
+      "templates": "Шаблоны",
+      "publications": "Публикации",
+      "kkk": "Заявки ККК"
+    },
+    "hints": {
+      "navigate": "навигация",
+      "select": "выбрать",
+      "close": "закрыть"
+    }
+  },
+  "emptyStates": {
+    "publications": {
+      "title": "У вас пока нет публикаций",
+      "description": "Добавьте свою первую научную работу, чтобы начать.",
+      "action": "Добавить публикацию"
+    },
+    "generatedDocuments": {
+      "title": "Документы пока не сгенерированы",
+      "description": "Робот загрузит их автоматически после обработки Excel из деканата."
+    },
+    "documents": {
+      "title": "У вас пока нет отчётов",
+      "description": "Загрузите первый отчёт, чтобы начать.",
+      "action": "Загрузить отчёт"
+    },
+    "notifications": {
+      "title": "Нет уведомлений",
+      "description": "Все уведомления о новых шаблонах, дедлайнах и отзывах появятся здесь."
+    },
+    "deadlines": {
+      "title": "Нет предстоящих дедлайнов",
+      "description": "Когда администратор добавит дедлайны, они появятся в календаре."
+    },
+    "kkkNotStarted": {
+      "title": "Начните подготовку к ККК",
+      "description": "Заполните разделы образования, опыта и публикаций. Текущий прогресс: 0%",
+      "action": "Начать с раздела Образование"
+    },
+    "allGeneratedDocuments": {
+      "title": "Документы пока не загружены роботом",
+      "description": "Запустите Python-робот с Excel-файлом из деканата для генерации документов."
+    },
+    "findSupervisor": {
+      "title": "Преподаватели не найдены",
+      "description": "Попробуйте другой запрос или используйте быстрые темы."
+    },
+    "templates": {
+      "title": "Шаблоны не найдены",
+      "description": "Попробуйте изменить поисковый запрос или фильтры."
+    }
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует или была перемещена.",
+    "goHome": "На главную"
+  },
+  "adminDashboard": {
+    "title": "Панель администратора",
+    "subtitle": "Быстрый обзор состояния кафедры",
+    "stats": {
+      "totalTeachers": "Преподавателей",
+      "incompleteProfiles": "Неполных профилей",
+      "pendingPublications": "Публикаций на проверке",
+      "totalPublications": "Всего публикаций",
+      "pendingReports": "Отчётов на проверке",
+      "totalReports": "Всего отчётов",
+      "generatedDocsMonth": "Документов за месяц",
+      "robot": "Робот"
+    },
+    "latestRobot": {
+      "title": "Последний запуск робота",
+      "description": "Статус и результаты последней генерации",
+      "processed": "Обработано",
+      "generated": "Сгенерировано",
+      "errors": "Ошибок",
+      "viewAll": "Все запуски робота",
+      "none": "Запусков ещё не было"
+    },
+    "alerts": {
+      "title": "Требуют внимания",
+      "description": "Элементы, ожидающие действия администратора",
+      "incompleteProfiles": "Неполных профилей",
+      "pendingPublications": "Публикаций на проверке",
+      "pendingReports": "Отчётов на проверке",
+      "kkkIncomplete": "Неготовых к ККК (<80%)",
+      "allClear": "Всё в порядке — нет срочных задач"
+    },
+    "topTeachers": {
+      "title": "Топ-5 активных преподавателей",
+      "description": "По количеству действий за последние 30 дней",
+      "actions": "действий",
+      "empty": "Нет данных об активности"
+    },
+    "quickActions": {
+      "title": "Быстрые действия",
+      "description": "Перейти к ключевым разделам",
+      "publicationsReview": "Проверка публикаций",
+      "kkkSubmissions": "Заявки ККК",
+      "teachers": "Преподаватели",
+      "templates": "Шаблоны",
+      "robotRuns": "Запуски робота",
+      "statistics": "Полная аналитика"
+    }
+  },
+  "statistics": {
+    "title": "Статистика кафедры",
+    "subtitle": "Детальная аналитика по всем показателям",
+    "noData": "Нет данных",
+    "cards": {
+      "teachers": "Преподавателей",
+      "incompleteProfiles": "Неполных профилей",
+      "publications": "Публикации",
+      "reports": "Отчёты",
+      "pending": "На проверке",
+      "docsThisMonth": "Документов за месяц",
+      "robot": "Робот",
+      "approvedReports": "Принятых отчётов",
+      "rejected": "Отклонено",
+      "verifiedPublications": "Верифицировано публикаций",
+      "outOf": "Из",
+      "topActive": "Топ активных",
+      "kkkIncomplete": "Неготовых к ККК",
+      "profiles": "профилей"
+    },
+    "charts": {
+      "pubsByDatabase": "Публикации по базам данных",
+      "pubsByDatabaseDesc": "Все публикации в системе",
+      "reportsByStatus": "Статусы отчётов",
+      "reportsByStatusDesc": "Распределение по статусам",
+      "kkkReadiness": "Готовность ККК по преподавателям",
+      "kkkReadinessDesc": "Топ-20, % завершения портфолио",
+      "genDocsByMonth": "Сгенерированные документы по месяцам",
+      "genDocsByMonthDesc": "Последние 12 месяцев"
+    },
+    "lastRobotRun": {
+      "title": "Последний запуск робота",
+      "processed": "Обработано",
+      "generated": "Сгенерировано",
+      "errors": "Ошибок",
+      "viewAll": "Все запуски робота",
+      "none": "Нет данных о запусках"
+    },
+    "topTeachers": {
+      "title": "Топ-5 активных преподавателей",
+      "description": "По количеству действий за последние 30 дней",
+      "actions": "действий",
+      "empty": "Нет данных об активности (таблица Activity пуста)"
+    }
+  },
+  "admin": {
+    "passwordResets": {
+      "title": "Запросы на сброс пароля",
+      "empty": "Нет запросов",
+      "columns": {
+        "user": "Пользователь",
+        "reason": "Причина",
+        "requested": "Дата запроса",
+        "status": "Статус",
+        "actions": "Действия"
+      },
+      "tabs": {
+        "pending": "Ожидают",
+        "approved": "Одобрены",
+        "rejected": "Отклонены"
+      },
+      "actions": {
+        "approve": "Одобрить",
+        "reject": "Отклонить"
+      },
+      "statuses": {
+        "pending": "Ожидает",
+        "approved": "Одобрен",
+        "rejected": "Отклонён",
+        "cancelled": "Отменён"
+      },
+      "approveDialog": {
+        "title": "Одобрить сброс пароля",
+        "description": "Выберите способ установки нового пароля.",
+        "customRadio": "Задать свой пароль",
+        "generateRadio": "Сгенерировать случайный пароль",
+        "passwordLabel": "Свой пароль",
+        "submit": "Одобрить"
+      },
+      "rejectDialog": {
+        "title": "Отклонить запрос",
+        "reasonLabel": "Причина отказа",
+        "submit": "Отклонить"
+      },
+      "success": {
+        "passwordCopied": "Пароль скопирован в буфер обмена",
+        "requestApproved": "Сброс пароля одобрен",
+        "requestRejected": "Запрос отклонён"
+      },
+      "warning": {
+        "shareSecurely": "Передайте пароль пользователю через защищённый канал. Он показывается только один раз."
+      }
+    },
+    "teachers": {
+      "resetPassword": {
+        "button": "Сбросить пароль",
+        "dialogTitle": "Сбросить пароль пользователя",
+        "generateRadio": "Сгенерировать случайный пароль",
+        "customRadio": "Задать свой пароль",
+        "passwordLabel": "Свой пароль",
+        "submit": "Сбросить пароль",
+        "success": "Пароль сброшен",
+        "warning": "Передайте пароль пользователю через защищённый канал. Он показывается только один раз."
+      }
+    }
+  },
+  "todayFocus": {
+    "aiBadge": "AI",
+    "stats": {
+      "deadlinesToday": "дедлайн(ов) сегодня",
+      "notifications": "непрочитанных уведомлений",
+      "returnedReports": "отчётов на доработку"
+    },
+    "actions": {
+      "viewDeadlines": "Дедлайны сегодня",
+      "viewNotifications": "Уведомления",
+      "fixReports": "Исправить отчёты",
+      "continueKkk": "Профиль KKK"
+    }
+  },
+  "pinned": {
+    "title": "Закреплённые",
+    "edit": "Изменить",
+    "done": "Готово",
+    "empty": "Нет закреплённых элементов. Закрепите шаблоны, публикации или страницы для быстрого доступа.",
+    "pin": "Закрепить",
+    "unpin": "Открепить",
+    "pinned": "Закреплено",
+    "unpinned": "Откреплено",
+    "maxReached": "Максимум 20 закреплённых элементов",
+    "pinThisPage": "Закрепить страницу"
+  },
+  "publicProfile": {
+    "headerTitle": "Академический портал",
+    "notFound": {
+      "title": "Профиль не найден",
+      "description": "Этот публичный профиль не существует или был отключён."
+    },
+    "loginToSystem": "Войти в систему",
+    "about": "О преподавателе",
+    "research": "Научные интересы",
+    "onlineProfiles": "Онлайн-профили",
+    "publications": "Публикации",
+    "education": "Образование",
+    "qrCode": "QR-код",
+    "qrModalTitle": "QR-код профиля",
+    "qrModalDescription": "Отсканируйте для перехода к профилю",
+    "copy": "Скопировать ссылку",
+    "copied": "Скопировано!",
+    "footerNote": "Академический портал — Публичный профиль"
+  },
+  "templateRequests": {
+    "requestButton": "Запросить шаблон",
+    "dialog": {
+      "title": "Запрос нового шаблона",
+      "titleLabel": "Название шаблона",
+      "titlePlaceholder": "Например, форма ежегодного отчёта о педагогической нагрузке",
+      "descLabel": "Описание",
+      "descPlaceholder": "Опишите, что должен содержать шаблон и для чего он будет использоваться...",
+      "categoryLabel": "Предполагаемая категория",
+      "categoryPlaceholder": "Выберите категорию (необязательно)",
+      "submit": "Отправить запрос",
+      "success": "Запрос отправлен. Администратор рассмотрит его в ближайшее время."
+    },
+    "myList": {
+      "title": "Мои запросы шаблонов",
+      "empty": "Запросов пока нет. Нажмите «Запросить шаблон», чтобы создать.",
+      "cancel": "Отменить",
+      "cancelSuccess": "Запрос отменён.",
+      "adminSays": "Ответ администратора"
+    },
+    "statuses": {
+      "pending": "Ожидает",
+      "inProgress": "В работе",
+      "completed": "Выполнен",
+      "rejected": "Отклонён",
+      "cancelled": "Отменён"
+    },
+    "admin": {
+      "title": "Запросы шаблонов",
+      "subtitle": "Просмотр и ответы на запросы преподавателей",
+      "empty": "Запросов в этой категории нет",
+      "columns": {
+        "title": "Название",
+        "description": "Описание",
+        "requestedBy": "Запросил",
+        "category": "Категория",
+        "createdAt": "Создан",
+        "status": "Статус",
+        "adminResponse": "Ответ администратора"
+      },
+      "actions": {
+        "viewDetails": "Подробнее",
+        "updateStatus": "Изменить статус",
+        "create": "Создать шаблон",
+        "createFromRequest": "Создать шаблон по запросу",
+        "updateSuccess": "Статус обновлён"
+      },
+      "statusUpdate": {
+        "dialog": "Обновить статус запроса",
+        "statusLabel": "Новый статус",
+        "responseLabel": "Ответ преподавателю",
+        "responsePlaceholder": "Необязательное сообщение преподавателю...",
+        "linkLabel": "Связать с созданным шаблоном",
+        "linkPlaceholder": "Выберите шаблон (необязательно)",
+        "submit": "Сохранить"
+      }
+    }
+  }
+}

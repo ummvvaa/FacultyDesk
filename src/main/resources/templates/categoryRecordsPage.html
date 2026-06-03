@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${category.name}">Категория</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { background-color: #f8f9fa; }
+        header { padding: 15px 0; background-color: #007bff; color: white; }
+        header .container { display: flex; justify-content: flex-end; }
+        header a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        header a:hover { text-decoration: underline; }
+
+        .record-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .record-card:hover {
+            transform: scale(1.03);
+        }
+
+        .record-title {
+            color: #007bff;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .record-meta { font-size: 14px; color: #6c757d; }
+        .pdf-link { margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/events">События</a>
+        <a href="/item">Категории</a>
+        <a href="/record">Создать запись</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center" th:text="'Записи категории: ' + ${category.name}">Записи категории</h2>
+
+    <div th:if="${records.size() == 0}">
+        <p class="text-center">Пока нет записей в этой категории.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" th:each="record : ${records}">
+            <div class="record-card">
+
+                <h5 class="record-title" th:text="${record.title}">Название записи</h5>
+
+                <p th:text="${record.description}">Описание записи</p>
+
+                <div class="record-meta mb-2">
+                    Автор: <span th:text="${record.author.username}">Имя автора</span><br>
+                    Дата: <span th:text="${#dates.format(record.createdAt, 'dd.MM.yyyy')}">Дата</span>
+                </div>
+
+                <div th:if="${record.pdf != null}">
+                    <a th:href="@{'/pdf/' + ${record.pdf}}"
+                       class="pdf-link btn btn-outline-primary btn-sm"
+                       target="_blank">
+                        📄 Открыть PDF
+                    </a>
+                </div>
+
+                <div class="mt-2">
+                    <div th:if="${favoriteIds.contains(record.id)}">
+                        <form th:action="@{'/favorites/remove/' + ${record.id}}" method="post">
+                            <button type="submit" class="btn btn-warning btn-sm">⭐ В избранном</button>
+                        </form>
+                    </div>
+
+                    <div th:unless="${favoriteIds.contains(record.id)}">
+                        <form th:action="@{'/favorites/add/' + ${record.id}}" method="post">
+                            <button type="submit" class="btn btn-outline-warning btn-sm">☆ В избранное</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

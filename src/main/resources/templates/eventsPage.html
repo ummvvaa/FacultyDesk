@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        header { padding: 15px 0; background-color: #007bff; color: white; }
+        header .container { display: flex; justify-content: flex-end; }
+        header a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        header a:hover { text-decoration: underline; }
+
+        .event-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.25s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        }
+
+        .event-link {
+            color: #007bff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .event-meta { font-size: 14px; color: #6c757d; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/me">Профиль</a>
+        <a href="/item">Категории</a>
+        <a href="/record">Создать запись</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Все события</h2>
+
+    <form method="get" class="mb-4">
+        <div class="form-row">
+            <div class="col-md-3 mb-2">
+                <input type="date" class="form-control" name="date"
+                       th:value="${date != null ? #temporals.format(date, 'yyyy-MM-dd') : ''}">
+            </div>
+            <div class="col-md-2 mb-2">
+                <button class="btn btn-primary btn-block">Фильтровать</button>
+            </div>
+        </div>
+    </form>
+
+    <div th:if="${events.size() == 0}">
+        <p class="text-center">Пока нет событий.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" th:each="event : ${events}">
+            <a th:href="@{'/events/' + ${event.id}}" style="text-decoration: none;">
+                <div class="event-card text-center p-4">
+                    <h5 class="event-link" th:text="${event.title}">Событие</h5>
+                    <div class="event-meta mt-3">
+                        <div>🕒 Дедлайн: <span th:text="${#dates.format(event.deadline, 'dd.MM.yyyy')}">—</span></div>
+                        <div th:text="${event.description}">Описание события</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

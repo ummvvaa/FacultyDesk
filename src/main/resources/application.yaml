@@ -1,0 +1,85 @@
+app:
+  robot:
+    password: ${ROBOT_PASSWORD:robot_change_me_2026}
+    input-dir: ${ROBOT_INPUT_DIR:./robot/input}
+    python-script: ${ROBOT_PYTHON_SCRIPT:./robot/main.py}
+    python-bin: "/Users/muh/IdeaProjects/fullStackpj/robot/venv/bin/python3"
+    execution-timeout-seconds: ${ROBOT_TIMEOUT_SECONDS:600}
+  kkk:
+    min-completion: 80
+  ai:
+    provider: ${AI_PROVIDER:groq}
+    groq:
+      api-key: ${GROQ_API_KEY:}
+      base-url: https://api.groq.com/openai/v1
+      model: llama-3.3-70b-versatile
+      max-tokens: 1024
+      temperature: 0.3
+      timeout-seconds: 30
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 100MB
+      enabled: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+      cache:
+        period: 0
+      add-mappings: true
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: temapernebaev@mail.ru
+    password: jXRm1LTAcqr1t3WIWBS1
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          ssl.enable: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/task_app
+    username: postgres
+    password: "0000"
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+  elastic:
+    metrics:
+      export:
+        host: http://localhost:9200
+        index: metrics-faculty
+        step: 10s
+        auto-create-index: true
+  prometheus:
+    metrics:
+      export:
+        enabled: false
+  metrics:
+    tags:
+      application: ${spring.application.name:diploma-backend}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      percentiles:
+        http.server.requests: 0.5, 0.95, 0.99

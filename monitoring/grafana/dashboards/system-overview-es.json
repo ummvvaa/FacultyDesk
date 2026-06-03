@@ -1,0 +1,200 @@
+{
+  "__inputs": [],
+  "__requires": [],
+  "annotations": { "list": [] },
+  "description": "System overview: HTTP, JVM, CPU, HikariCP — Elasticsearch datasource",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "id": 1,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "HTTP count",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "count", "id": "1", "type": "max" }],
+          "query": "name:\"http_server_requests\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "HTTP запросы (count)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 }, "unit": "ms" },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "id": 2,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "mean response time",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "mean", "id": "1", "type": "avg" }],
+          "query": "name:\"http_server_requests\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Среднее время ответа (mean, ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "fixedColor": "red", "mode": "fixed" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "id": 3,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "5xx errors",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "count", "id": "1", "type": "max" }],
+          "query": "name:\"http_server_requests\" AND status:\"500\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Ошибки 5xx",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 }, "unit": "ms" },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "id": 4,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "{{phi}}",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "3", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" },
+            { "field": "phi", "id": "2", "settings": { "min_doc_count": "1", "order": "desc", "orderBy": "_term", "size": "3" }, "type": "terms" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "value", "id": "1", "type": "avg" }],
+          "query": "name:\"http_server_requests_percentile\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Percentile времени ответа (p50/p95/p99)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 }, "unit": "bytes" },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+      "id": 5,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "JVM memory used",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "value", "id": "1", "type": "avg" }],
+          "query": "name:\"jvm_memory_used\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "JVM память (used, bytes)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 }, "unit": "percentunit" },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+      "id": 6,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "{{name}}",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "3", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" },
+            { "field": "name", "id": "2", "settings": { "min_doc_count": "1", "order": "desc", "orderBy": "_term", "size": "5" }, "type": "terms" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "value", "id": "1", "type": "avg" }],
+          "query": "name:\"system_cpu_usage\" OR name:\"process_cpu_usage\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "CPU usage",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
+      "id": 7,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "active connections",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "value", "id": "1", "type": "avg" }],
+          "query": "name:\"hikaricp_connections_active\"",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "HikariCP активные соединения",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["elasticsearch", "system"],
+  "templating": { "list": [] },
+  "time": { "from": "now-24h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "System Overview ES",
+  "uid": "system-overview-es",
+  "version": 2
+}

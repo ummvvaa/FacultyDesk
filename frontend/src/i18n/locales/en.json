@@ -1,0 +1,1273 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "add": "Add",
+    "remove": "Remove",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "warning": "Warning",
+    "info": "Info",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "retry": "Retry",
+    "more": "More",
+    "less": "Less",
+    "viewAll": "View all",
+    "viewDetails": "View details",
+    "export": "Export",
+    "import": "Import",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "share": "Share",
+    "print": "Print",
+    "settings": "Settings",
+    "help": "Help",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "name": "Name",
+    "description": "Description",
+    "type": "Type",
+    "from": "From",
+    "to": "To",
+    "total": "Total"
+  },
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "loginTitle": "Login",
+    "registerTitle": "Registration",
+    "welcomeBack": "Welcome back",
+    "signInSubtitle": "Sign in to your account to continue.",
+    "forgotPassword": "Forgot password?",
+    "invalidCredentials": "Sign-in failed. Please check your credentials.",
+    "footerHint": "Secured by JWT authentication. Internal use only.",
+    "heroTitle": "Department of IT Management System",
+    "heroSubtitle": "Manage publications, KKK preparation, deadlines and documents — in a single workspace.",
+    "forgotPasswordDlg": {
+      "title": "Forgot your password?",
+      "description": "Submit a request and an administrator will help reset your password.",
+      "emailLabel": "Email",
+      "reasonLabel": "Reason",
+      "reasonPlaceholder": "Brief description, e.g., 'Forgot my password after vacation'",
+      "submit": "Submit request",
+      "cancel": "Cancel",
+      "success": "Request submitted. An administrator will contact you.",
+      "emailInvalid": "Please enter a valid email.",
+      "reasonTooShort": "Reason must be at least 5 characters."
+    }
+  },
+  "login": {
+    "sessionExpired": "Your session has expired. Please log in again."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "myDocuments": "My Documents",
+    "generatedDocuments": "Generated Documents",
+    "allGeneratedDocuments": "All Generated Documents",
+    "templatesLibrary": "Templates Library",
+    "profile": "Profile",
+    "statistics": "Statistics",
+    "teachers": "Teachers",
+    "passwordResets": "Password Resets",
+    "categories": "Categories",
+    "templates": "Manage Templates",
+    "activity": "Activity Log",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "robotRuns": "Robot Runs",
+    "publications": "Publications",
+    "publicationsReview": "Publications Review",
+    "kkkPreparation": "KKK Preparation",
+    "kkkSubmissions": "KKK Submissions",
+    "deadlines": "Deadlines",
+    "deadlinesManagement": "Deadlines Management",
+    "findSupervisor": "Find Supervisor",
+    "messages": "Messages",
+    "users": "Users Search",
+    "adminDashboard": "Admin Dashboard",
+    "allReports": "All Reports",
+    "templateRequests": "Template Requests"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "noUploadsYet": "No uploads yet",
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "kkkReadiness": "KKK Readiness",
+    "myPublications": "My Publications",
+    "myGenDocs": "Generated Documents",
+    "myReports": "My Reports",
+    "other": "Other",
+    "lastUpload": "Last upload",
+    "pubsByYear": "Publications by Year",
+    "last5Years": "Last 5 years",
+    "reportsActivity": "Reports Activity",
+    "last6Months": "Last 6 months",
+    "upcomingDeadlines": "Upcoming Deadlines",
+    "recentNotifications": "Recent Notifications",
+    "templateUpdates": "Template Updates",
+    "noData": "No data to display",
+    "noDeadlines": "No upcoming deadlines",
+    "noNotifications": "No notifications",
+    "noTemplateUpdates": "No template updates in last 30 days"
+  },
+  "documents": {
+    "title": "My Documents",
+    "addNew": "Add New Report",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "returned": "Returned for Revision"
+    }
+  },
+  "generatedDocuments": {
+    "title": "Generated Documents",
+    "myDocuments": "My Generated Documents",
+    "allDocuments": "All Generated Documents",
+    "emptyState": "No generated documents yet",
+    "deleteConfirm": "Are you sure you want to delete this document? This action cannot be undone.",
+    "columns": {
+      "title": "Title",
+      "type": "Type",
+      "source": "Source Excel",
+      "date": "Generation Date",
+      "status": "Status",
+      "comment": "Comment",
+      "actions": "Actions",
+      "teacher": "Teacher",
+      "file": "File"
+    },
+    "types": {
+      "individualWorkload": "Individual Workload",
+      "semesterWorkload": "Semester Workload",
+      "practiceSupervision": "Practice Supervision",
+      "diplomaSupervision": "Diploma Supervision",
+      "kkkDocument": "KKK Document",
+      "other": "Other"
+    },
+    "statuses": {
+      "generated": "Generated",
+      "uploaded": "Uploaded",
+      "viewed": "Viewed",
+      "downloaded": "Downloaded",
+      "needsReview": "Needs Review",
+      "error": "Error"
+    },
+    "actions": {
+      "download": "Download",
+      "view": "View",
+      "changeStatus": "Change Status",
+      "delete": "Delete"
+    },
+    "filters": {
+      "teacher": "All teachers",
+      "type": "All types",
+      "dateFrom": "Date from",
+      "dateTo": "Date to",
+      "sourceExcel": "Source Excel...",
+      "status": "All statuses"
+    }
+  },
+  "templatesLibrary": {
+    "title": "Templates Library",
+    "subtitle": "Download up-to-date document templates",
+    "search": "Search by name...",
+    "uploadButton": "Manage Templates",
+    "download": "Download",
+    "downloadSuccess": "File downloaded",
+    "downloadError": "Failed to download file",
+    "preview": {
+      "button": "Preview",
+      "title": "Preview",
+      "downloadInstead": "Download",
+      "notSupported": "Preview is not available for this file type. Download it to view.",
+      "loadError": "Failed to load preview. Try downloading the file instead."
+    },
+    "noResults": "No templates found",
+    "noResultsHint": "Try adjusting the filter parameters",
+    "uploadedBy": "Uploaded by",
+    "version": "Version",
+    "downloadCount": "Downloads",
+    "lastUpdate": "Updated",
+    "filters": {
+      "year": "All academic years",
+      "category": "All categories",
+      "fileType": "All file types",
+      "status": "All statuses"
+    },
+    "status": {
+      "active": "Active",
+      "archived": "Archived",
+      "draft": "Draft"
+    },
+    "semester": {
+      "fall": "Fall",
+      "spring": "Spring",
+      "summer": "Summer",
+      "all": "Full year"
+    },
+    "category": {
+      "teachingWorkload": "Teaching Workload",
+      "kkkDocuments": "KKK Documents",
+      "scientificReports": "Scientific Reports",
+      "serviceNotes": "Service Notes",
+      "protocols": "Protocols",
+      "practiceDocuments": "Practice Documents",
+      "diplomaSupervision": "Diploma Supervision",
+      "qualificationDocuments": "Qualification Documents",
+      "departmentForms": "Department Forms",
+      "other": "Other"
+    }
+  },
+  "publications": {
+    "title": "My Publications",
+    "addPublication": "Add Publication",
+    "editPublication": "Edit Publication",
+    "emptyState": "No publications yet",
+    "addFirstPublication": "Add your first publication to get started",
+    "tabs": {
+      "all": "All",
+      "scopus": "Scopus",
+      "wos": "Web of Science",
+      "kokson": "KOKSON",
+      "other": "Other"
+    },
+    "filters": {
+      "type": "Type",
+      "quartile": "Quartile",
+      "doi": "DOI",
+      "status": "Status",
+      "verified": "Verified",
+      "needVerification": "Need verification",
+      "withConfirmationFile": "With confirmation file",
+      "missingEvidence": "Missing evidence",
+      "withDoi": "With DOI",
+      "withoutDoi": "Without DOI"
+    },
+    "form": {
+      "title": "Title",
+      "authors": "Authors",
+      "year": "Publication Year",
+      "journal": "Journal / Conference Name",
+      "publicationType": "Publication Type",
+      "databaseType": "Database",
+      "doi": "DOI",
+      "url": "URL",
+      "quartile": "Quartile",
+      "percentile": "Percentile (0–100)",
+      "indexingStatus": "Indexing Status"
+    },
+    "publicationTypes": {
+      "scopusJournal": "Scopus Journal",
+      "scopusConference": "Scopus Conference",
+      "wosArticle": "WoS Article",
+      "koksonArticle": "KOKSON Article",
+      "localJournal": "Local Journal",
+      "conferencePaper": "Conference Paper",
+      "patent": "Patent",
+      "certificate": "Certificate",
+      "other": "Other"
+    },
+    "databaseTypes": {
+      "scopus": "Scopus",
+      "webOfScience": "Web of Science",
+      "kokson": "KOKSON",
+      "other": "Other"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "underReview": "Under Review",
+      "verified": "Verified",
+      "rejected": "Rejected",
+      "needsCorrection": "Needs Correction"
+    },
+    "quartiles": {
+      "q1": "Q1",
+      "q2": "Q2",
+      "q3": "Q3",
+      "q4": "Q4",
+      "none": "—"
+    },
+    "fileTypes": {
+      "pdfArticle": "PDF Article",
+      "ottisk": "Ottisk",
+      "certificate": "Certificate",
+      "journalPageScan": "Journal Page Scan",
+      "doiConfirmation": "DOI Confirmation",
+      "other": "Other"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "submit": "Submit for Review",
+      "verify": "Verify",
+      "reject": "Reject",
+      "needsCorrection": "Needs Correction",
+      "uploadFile": "Upload",
+      "downloadFile": "Download",
+      "deleteFile": "Delete"
+    },
+    "aiExtract": {
+      "title": "Quick Fill from PDF",
+      "dropZone": "Drop a PDF here or click to select",
+      "extractButton": "Extract Metadata",
+      "extracting": "Extracting…",
+      "confidence": "Extracted with {{percent}}% confidence",
+      "extracted": "Fields auto-filled — please review before saving",
+      "clear": "Clear extracted data",
+      "savePdfAsFile": "Save this PDF as the article file after creating the publication",
+      "error": "Could not extract metadata from this PDF",
+      "selectPdfFirst": "Please select a PDF file first"
+    },
+    "aiSuggest": {
+      "button": "Suggest fields with AI",
+      "dialogTitle": "AI Suggestions for «{{journal}}»",
+      "applySelected": "Apply selected",
+      "confidence": "Confidence: {{percent}}%",
+      "dismiss": "Dismiss",
+      "lowConfidence": "AI couldn't find reliable data for this journal",
+      "success": "Fields filled from AI suggestions"
+    }
+  },
+  "robotRuns": {
+    "title": "Robot Runs",
+    "subtitle": "Automation History",
+    "latestRun": "Latest Run",
+    "viewDetails": "View Details",
+    "noRuns": "No robot runs yet",
+    "triggeredBy": "Triggered by",
+    "columns": {
+      "id": "ID",
+      "sourceFile": "Source File",
+      "startedAt": "Started",
+      "finishedAt": "Finished",
+      "duration": "Duration",
+      "status": "Status",
+      "processed": "Processed",
+      "errors": "Errors",
+      "generated": "Generated"
+    },
+    "status": {
+      "running": "Running",
+      "success": "Success",
+      "failed": "Failed",
+      "partial": "Partial"
+    },
+    "details": {
+      "title": "Run Details",
+      "errorLog": "Error Log",
+      "summary": "Summary",
+      "noErrors": "No errors recorded"
+    }
+  },
+  "admin": {
+    "robot": {
+      "upload": {
+        "title": "Upload Excel & Run Robot",
+        "dragHere": "Drag .xlsx here or",
+        "browse": "browse",
+        "fileSelected": "File selected",
+        "fileTooLarge": "File too large (max 25 MB)",
+        "invalidFormat": "Only .xlsx files are allowed",
+        "uploadButton": "Upload & Run Robot",
+        "uploading": "Starting robot...",
+        "success": "Robot started — table will refresh shortly",
+        "error": "Failed to start robot"
+      },
+      "statuses": {
+        "running": "Running",
+        "success": "Success",
+        "partial": "Partial",
+        "failed": "Failed",
+        "rolledBack": "Rolled Back"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "rollback": "Rollback"
+      },
+      "rollbackConfirm": {
+        "title": "Confirm Rollback",
+        "description": "This will soft-delete all documents generated by this run. Teachers will be notified. Cannot be undone.",
+        "confirm": "Rollback",
+        "cancel": "Cancel"
+      },
+      "rollbackSuccess": "Run rolled back successfully",
+      "rollbackError": "Rollback failed",
+      "rolledBackAt": "Rolled back at"
+    }
+  },
+  "kkk": {
+    "title": "KKK Preparation",
+    "subtitle": "Compile your qualification dossier",
+    "adminTitle": "KKK Submissions",
+    "completion": "completion",
+    "submittedAt": "Submitted",
+    "checkedAt": "Checked",
+    "checklistTitle": "Checklist",
+    "missingInformation": "Missing information",
+    "aiRecommendationsTitle": "AI Recommendations",
+    "aiRecommendationsComingSoon": "Coming soon — AI assistant will analyze your profile and suggest improvements.",
+    "publicationsTabHint": "Publications are managed in the dedicated section. Updates there are reflected in the KKK checklist.",
+    "status": {
+      "label": "Status",
+      "transitionTo": "Transition to",
+      "notStarted": "Not started",
+      "inProgress": "In progress",
+      "submitted": "Submitted",
+      "checked": "Checked",
+      "returnedForCorrection": "Returned for correction",
+      "ready": "Ready"
+    },
+    "checklist": {
+      "profileCompleted": "Profile completed",
+      "educationAdded": "Education added",
+      "workExperienceAdded": "Work experience added",
+      "qualificationCoursesLast3Years": "Qualification courses (last 3 years)",
+      "publicationsLast5Years": "Publications (last 5 years)",
+      "doiLinksAdded": "DOI links for Scopus/WoS",
+      "confirmationFilesUploaded": "Confirmation files uploaded",
+      "awardsPatentsAdded": "Awards or patents added",
+      "englishLevelAdded": "English level set"
+    },
+    "checklistDescription": {
+      "profileCompleted": "Academic degree, position, phone, email, research areas",
+      "educationAdded": "At least one education record",
+      "workExperienceAdded": "At least one work experience record",
+      "qualificationCoursesLast3Years": "At least one course in the last 3 years",
+      "publicationsLast5Years": "At least one publication in the last 5 years",
+      "doiLinksAdded": "Every Scopus/WoS publication must have a DOI",
+      "confirmationFilesUploaded": "Each publication must have a supporting file",
+      "awardsPatentsAdded": "Optional but recommended",
+      "englishLevelAdded": "Set your proficiency in profile"
+    },
+    "tabs": {
+      "education": "Education",
+      "workExperience": "Work Experience",
+      "qualificationCourses": "Qualification Courses",
+      "awards": "Awards",
+      "patents": "Patents",
+      "publications": "Publications"
+    },
+    "forms": {
+      "education": {
+        "degree": "Degree",
+        "institution": "Institution",
+        "specialty": "Specialty",
+        "year": "Year"
+      },
+      "workExperience": {
+        "position": "Position",
+        "organization": "Organization",
+        "startYear": "Start year",
+        "endYear": "End year",
+        "current": "Currently working here",
+        "description": "Description",
+        "present": "present"
+      },
+      "qualificationCourses": {
+        "name": "Course name",
+        "organization": "Organization",
+        "year": "Year",
+        "hours": "Hours",
+        "hoursShort": "h",
+        "certificate": "Certificate",
+        "noCertificate": "No certificate"
+      },
+      "awards": {
+        "name": "Name",
+        "organization": "Organization",
+        "year": "Year",
+        "description": "Description"
+      },
+      "patents": {
+        "title": "Title",
+        "patentNumber": "Patent number",
+        "year": "Year",
+        "country": "Country",
+        "description": "Description"
+      }
+    },
+    "emptyStates": {
+      "education": "No education records yet.",
+      "workExperience": "No work experience yet.",
+      "qualificationCourses": "No qualification courses yet.",
+      "awards": "No awards yet.",
+      "patents": "No patents yet.",
+      "adminTable": "No KKK submissions match the filters.",
+      "generic": "No records."
+    },
+    "actions": {
+      "submit": "Submit for review",
+      "export": "Export KKK Package",
+      "exportPdf": "Export PDF",
+      "exportSummary": "Export Summary CSV",
+      "viewDetails": "View Details",
+      "markChecked": "Mark as Checked",
+      "markReady": "Mark as Ready",
+      "returnForCorrection": "Return for correction",
+      "changeStatus": "Change status",
+      "edit": "Edit",
+      "delete": "Delete",
+      "addNew": "Add new",
+      "uploadCertificate": "Upload",
+      "downloadCertificate": "Download",
+      "goToSection": "Go to section"
+    },
+    "alerts": {
+      "lowCompletion": "Completion is {{value}}%. Minimum 80% required to submit.",
+      "alreadySubmitted": "Already submitted or ready.",
+      "returnedForCorrection": "Returned for correction",
+      "submittedSuccess": "Submitted for review.",
+      "exportFailed": "Failed to export PDF.",
+      "confirmDelete": "Delete this record?",
+      "fieldRequired": "Field \"{{field}}\" is required.",
+      "reviewerComment": "Comment",
+      "commentPlaceholder": "Add a note for the teacher (required for return for correction)"
+    },
+    "gettingStarted": {
+      "start": {
+        "eyebrow": "Getting started",
+        "title": "Let's set up your KKK profile",
+        "description": "Start by adding your education and work experience. The whole process takes about 30 minutes.",
+        "buttonPrefix": "Start with {{sectionName}}"
+      },
+      "continue": {
+        "eyebrow": "Next step",
+        "title": "Continue with {{sectionName}}",
+        "description": "Your next step: complete {{sectionName}} to unlock more checklist items.",
+        "buttonPrefix": "Continue with {{sectionName}}"
+      },
+      "sections": {
+        "profile": "your profile",
+        "education": "Education",
+        "workExperience": "Work Experience",
+        "qualificationCourses": "Qualification Courses",
+        "publications": "Publications",
+        "doiLinks": "Publications with DOI",
+        "confirmationFiles": "Publication Files",
+        "awards": "Awards & Patents",
+        "englishLevel": "English Level"
+      }
+    },
+    "summary": {
+      "total": "Total teachers",
+      "submitted": "Submitted",
+      "ready": "Ready",
+      "returned": "Returned",
+      "avgCompletion": "Avg. completion"
+    },
+    "filters": {
+      "search": "Search by name or email...",
+      "status": "Status",
+      "completionRange": "Completion range",
+      "sortBy": "Sort by",
+      "sortCompletionDesc": "Completion (desc)",
+      "sortSubmittedDesc": "Submitted (desc)"
+    },
+    "table": {
+      "teacher": "Teacher",
+      "completion": "Completion",
+      "status": "Status",
+      "submittedAt": "Submitted",
+      "lastUpdate": "Updated",
+      "actions": "Actions"
+    },
+    "csv": {
+      "teacher": "Teacher",
+      "email": "Email",
+      "completion": "Completion %",
+      "status": "Status",
+      "submittedAt": "Submitted At",
+      "checkedAt": "Checked At"
+    },
+    "tutor": {
+      "title": "Ask the KKK Tutor",
+      "badge": "AI",
+      "askPlaceholder": "Ask about KKK requirements...",
+      "send": "Send",
+      "clear": "Clear chat",
+      "suggestedQuestions": {
+        "kkkRequirements": "What do I need to submit for KKK?",
+        "confirmDocs": "What documents are needed to confirm publications?",
+        "scopusCount": "How many Scopus publications do I need?",
+        "qualificationRequirements": "What are the qualification course requirements?"
+      },
+      "thinking": "Thinking...",
+      "error": "AI Tutor is temporarily unavailable. Please try again."
+    }
+  },
+  "profile": {
+    "subtitle": "Manage your academic profile",
+    "avatar": "Avatar",
+    "avatarDescription": "Upload a profile photo",
+    "upload": "Upload",
+    "avatarSuccess": "Avatar updated successfully",
+    "saveSuccess": "Profile saved",
+    "saveError": "Failed to save profile",
+    "personalInfo": "Personal Information",
+    "personalInfoDescription": "Update your contact and background info",
+    "generateAiSummary": "Generate AI Summary",
+    "generateAiSummaryHint": "Coming in Phase 8c — AI will analyze your profile and write a summary",
+    "manageInKkk": "Manage in KKK",
+    "sections": {
+      "academicInfo": "Academic Information",
+      "onlineProfiles": "Online Profiles",
+      "academicActivities": "Academic Activities",
+      "academicActivitiesDescription": "Preview of your academic data. Manage records in KKK Preparation.",
+      "aiSummary": "AI Summary",
+      "aiSummaryDescription": "Auto-generated profile summary. Edit manually or regenerate with AI."
+    },
+    "fields": {
+      "phone": "Phone",
+      "office": "Office",
+      "researchAreas": "Research Areas",
+      "researchAreasHint": "Separate with commas",
+      "publications": "Publications",
+      "academicDegree": "Academic Degree",
+      "academicDegreePlaceholder": "e.g. PhD in Mathematics",
+      "academicTitle": "Academic Title",
+      "academicTitlePlaceholder": "e.g. Associate Professor",
+      "position": "Position",
+      "positionPlaceholder": "e.g. Senior Lecturer",
+      "employmentRate": "Employment Rate",
+      "englishLevel": "English Level",
+      "scopusAuthorId": "Scopus Author ID",
+      "orcid": "ORCID",
+      "googleScholar": "Google Scholar URL",
+      "aiSummary": "AI Summary",
+      "aiSummaryPlaceholder": "Summary of your academic profile..."
+    },
+    "englishLevels": {
+      "a1": "A1 – Beginner",
+      "a2": "A2 – Elementary",
+      "b1": "B1 – Intermediate",
+      "b2": "B2 – Upper Intermediate",
+      "c1": "C1 – Advanced",
+      "c2": "C2 – Proficiency",
+      "native": "Native",
+      "none": "Not specified"
+    },
+    "publicProfile": {
+      "section": "Public Profile",
+      "description": "Enable a public URL that anyone can visit without logging in.",
+      "enableLabel": "Enable public profile",
+      "customSlug": "Custom URL slug (optional)",
+      "slugHelp": "3–50 lowercase letters, numbers, hyphens",
+      "publicUrl": "Your public URL",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "view": "View public profile",
+      "qrCode": "QR Code",
+      "downloadQr": "Download QR",
+      "enabled": "Public profile enabled",
+      "disabled": "Public profile disabled",
+      "slugAvailable": "Slug available",
+      "slugTaken": "Slug already taken",
+      "slugInvalid": "Invalid slug. Use 3–50 lowercase letters, numbers, hyphens."
+    },
+    "cv": {
+      "exportButton": "Download CV (PDF)",
+      "downloading": "Generating...",
+      "success": "CV downloaded",
+      "error": "Failed to generate CV"
+    },
+    "security": {
+      "section": "Security",
+      "description": "Manage your password and account security.",
+      "passwordLabel": "Password",
+      "passwordSubtitle": "Change your password using your current one.",
+      "changePassword": "Change password",
+      "changePasswordTitle": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Repeat new password",
+      "passwordHint": "At least 8 characters",
+      "passwordChanged": "Password changed successfully",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "passwordsDontMatch": "Passwords do not match",
+      "changeError": "Failed to change password"
+    }
+  },
+  "deadlines": {
+    "title": "Academic Calendar",
+    "managementTitle": "Deadlines Management",
+    "addDeadline": "Add Deadline",
+    "editDeadline": "Edit Deadline",
+    "emptyState": "No deadlines found",
+    "total": "deadlines",
+    "active": "Active",
+    "inactive": "Inactive",
+    "listView": "List",
+    "calendarView": "Calendar",
+    "categories": {
+      "kkk": "KKK",
+      "scopus": "Scopus",
+      "quarterly_report": "Quarterly Report",
+      "semester_report": "Semester Report",
+      "workload_report": "Workload Report",
+      "practice_report": "Practice Report",
+      "accreditation": "Accreditation",
+      "other": "Other"
+    },
+    "targetRoles": {
+      "all": "All users",
+      "teachers_only": "Teachers only",
+      "admins_only": "Admins only",
+      "specific_users": "Specific users"
+    },
+    "repeatTypes": {
+      "one_time": "One-time",
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "semester": "Per semester",
+      "annual": "Annual"
+    },
+    "form": {
+      "title": "Title",
+      "description": "Description",
+      "date": "Deadline date",
+      "category": "Category",
+      "target": "Target audience",
+      "users": "Select users",
+      "repeat": "Repeat",
+      "active": "Active"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "notifyNow": "Send notifications",
+      "toggleActive": "Toggle active"
+    },
+    "table": {
+      "title": "Title",
+      "date": "Date",
+      "category": "Category",
+      "target": "Target",
+      "repeat": "Repeat",
+      "active": "Status",
+      "createdBy": "Created by",
+      "actions": "Actions"
+    },
+    "alerts": {
+      "daysLeft": "in {{count}} day(s)",
+      "today": "Today!",
+      "overdue": "Overdue"
+    },
+    "deleteConfirm": "Delete \"{{title}}\"? This action cannot be undone."
+  },
+  "ai": {
+    "recommendations": {
+      "title": "AI Recommendations",
+      "refresh": "Refresh AI Analysis",
+      "allRecommendations": "All recommendations",
+      "error": "Failed to load recommendations. Please try again.",
+      "allComplete": "Great — no critical gaps in your profile. Keep going!",
+      "priority": {
+        "critical": "Critical",
+        "important": "Important",
+        "niceToHave": "Nice to have"
+      }
+    },
+    "summary": {
+      "generate": "Generate AI Summary",
+      "generating": "Generating...",
+      "save": "Save",
+      "saved": "AI summary saved",
+      "lastGenerated": "Last generated: {{date}}",
+      "hint": "AI summary helps colleagues and students understand your expertise. You can edit before saving.",
+      "error": "Failed to generate summary. Please try again."
+    },
+    "generateDescription": {
+      "button": "✨ Generate with AI",
+      "generating": "Generating...",
+      "success": "Description generated",
+      "error": "Failed to generate description"
+    },
+    "assistant": {
+      "chatTitle": "AI Assistant",
+      "poweredBy": "Powered by Groq",
+      "poweredByLong": "Powered by Groq Llama 3.3 70B · ⌘+Enter to send",
+      "newChat": "New chat",
+      "welcomeTitle": "Hi {{name}}! How can I help?",
+      "welcomeDescription": "Ask me anything about your KKK, deadlines, publications, or the system.",
+      "suggestedQuestions": {
+        "kkkProgress": "What's my KKK progress?",
+        "deadlines": "Show my upcoming deadlines",
+        "publicationsNeeded": "How many publications do I need for KKK?",
+        "whatNext": "What should I work on next?"
+      },
+      "placeholder": "Ask anything…",
+      "send": "Send",
+      "sending": "Sending…",
+      "copyMessage": "Copy",
+      "copied": "Copied",
+      "deleteConversation": "Delete conversation?",
+      "error": "Something went wrong. Try again.",
+      "errorRetry": "Retry",
+      "conversationsList": "Conversations",
+      "noConversations": "No conversations yet"
+    }
+  },
+  "userProfile": {
+    "about": "About"
+  },
+  "aiSearch": {
+    "title": "🤖 Find templates by description",
+    "placeholder": "Describe what you need (e.g., 'I need a template for practice report')",
+    "search": "AI Search",
+    "clear": "Clear AI results",
+    "suggestions": "AI Suggestions",
+    "match": "match",
+    "matchedKeywords": "Matched keywords",
+    "noResults": "No templates matched your query. Try different words.",
+    "error": "AI search failed. Please try again."
+  },
+  "findSupervisor": {
+    "title": "Find Supervisor / Research Search",
+    "subtitle": "Search teachers by research interests, publications, and expertise",
+    "placeholder": "Describe your research interest (e.g., 'machine learning, neural networks')",
+    "quickTopics": "Quick topics",
+    "viewProfile": "View Profile",
+    "sendMessage": "Send Message",
+    "relevantPublications": "Relevant publications",
+    "matchedFields": "Matched fields",
+    "researchAreas": "Research areas",
+    "noResults": "No teachers matched your query. Try different keywords.",
+    "error": "Search failed. Please try again.",
+    "fields": {
+      "researchAreas": "research areas",
+      "profileDescription": "profile",
+      "position": "position",
+      "publications": "publications"
+    }
+  },
+  "sidebar": {
+    "departmentName": "IT Department",
+    "teacherPortal": "Teacher Portal",
+    "adminPanel": "Admin Panel",
+    "groups": {
+      "workspace": "Workspace",
+      "academic": "Academic",
+      "peopleMessages": "People & Messages",
+      "personal": "Personal",
+      "overview": "Overview",
+      "contentManagement": "Content Management",
+      "academicReview": "Academic Review",
+      "usersAccess": "Users & Access",
+      "automation": "Automation"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "admin": "Admin"
+  },
+  "unauthorized": {
+    "title": "Access Denied",
+    "message": "You don't have access to this page",
+    "goHome": "Go to Home"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "corporate": "Corporate",
+    "highContrast": "High Contrast"
+  },
+  "notifications": {
+    "unreadCount": "{{count}} unread notification(s)",
+    "noUnread": "No unread notifications",
+    "markAllRead": "Mark all as read",
+    "markedAllRead": "All notifications marked as read",
+    "markRead": "Mark as read",
+    "delete": "Delete",
+    "deleted": "Notification deleted",
+    "empty": "No notifications",
+    "viewAll": "View all notifications",
+    "priorityHigh": "High",
+    "groups": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "thisWeek": "This week",
+      "earlier": "Earlier"
+    },
+    "filters": {
+      "all": "All",
+      "unread": "Unread",
+      "read": "Read",
+      "type": "Filter by type",
+      "clearAll": "Clear all"
+    },
+    "types": {
+      "KKK_COLLECTION_STARTED": "KKK collection started",
+      "KKK_STATUS_CHANGED": "KKK status changed",
+      "SCOPUS_UPDATE_REQUIRED": "Scopus update required",
+      "QUARTERLY_DEADLINE": "Quarterly deadline",
+      "SEMESTER_DEADLINE": "Semester deadline",
+      "DEADLINE_REMINDER": "Deadline reminder",
+      "DEADLINE_APPROACHING_WEEK": "Deadline in 7 days",
+      "DEADLINE_APPROACHING_3DAYS": "Deadline in 3 days",
+      "DEADLINE_TOMORROW": "Deadline tomorrow",
+      "DEADLINE_OVERDUE": "Deadline overdue",
+      "TEMPLATE_UPDATED": "Template updated",
+      "TEMPLATE_NEW": "New template",
+      "GENERATED_DOCUMENT_UPLOADED": "Document generated",
+      "REPORT_RETURNED": "Report returned",
+      "REPORT_ACCEPTED": "Report accepted",
+      "REPORT_REJECTED": "Report rejected",
+      "NEW_ADMIN_COMMENT": "New admin comment",
+      "ROBOT_COMPLETED": "Robot completed",
+      "ROBOT_FAILED": "Robot failed",
+      "PUBLICATION_VERIFIED": "Publication verified",
+      "PUBLICATION_REJECTED": "Publication rejected",
+      "PUBLICATION_NEEDS_CORRECTION": "Publication needs correction",
+      "NEW_MESSAGE": "New message",
+      "FRIENDSHIP_REQUEST": "Friend request",
+      "FRIENDSHIP_ACCEPTED": "Friend request accepted"
+    }
+  },
+  "commandPalette": {
+    "placeholder": "Search pages, users, templates...",
+    "noResults": "No results found",
+    "sections": {
+      "pages": "Pages",
+      "teachers": "Teachers",
+      "templates": "Templates",
+      "publications": "Publications",
+      "kkk": "KKK Submissions"
+    },
+    "hints": {
+      "navigate": "navigate",
+      "select": "select",
+      "close": "close"
+    }
+  },
+  "emptyStates": {
+    "publications": {
+      "title": "No publications yet",
+      "description": "Add your first scientific publication to get started.",
+      "action": "Add Publication"
+    },
+    "generatedDocuments": {
+      "title": "No documents generated yet",
+      "description": "The robot will upload them automatically after processing Excel files from the dean's office."
+    },
+    "documents": {
+      "title": "No reports yet",
+      "description": "Upload your first report to get started.",
+      "action": "Upload Report"
+    },
+    "notifications": {
+      "title": "No notifications",
+      "description": "Notifications about new templates, deadlines, and feedback will appear here."
+    },
+    "deadlines": {
+      "title": "No upcoming deadlines",
+      "description": "When the administrator adds deadlines, they will appear in the calendar."
+    },
+    "kkkNotStarted": {
+      "title": "Start your KKK preparation",
+      "description": "Fill in the education, experience, and publication sections. Current progress: 0%",
+      "action": "Start with Education"
+    },
+    "allGeneratedDocuments": {
+      "title": "No documents uploaded yet",
+      "description": "Run the Python robot with an Excel file from the dean's office to generate documents."
+    },
+    "findSupervisor": {
+      "title": "No teachers found",
+      "description": "Try a different query or use the quick topic suggestions."
+    },
+    "templates": {
+      "title": "No templates found",
+      "description": "Try adjusting your search or filters."
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go to Dashboard"
+  },
+  "adminDashboard": {
+    "title": "Admin Dashboard",
+    "subtitle": "Quick overview of department status",
+    "stats": {
+      "totalTeachers": "Teachers",
+      "incompleteProfiles": "Incomplete profiles",
+      "pendingPublications": "Pending publications",
+      "totalPublications": "Total publications",
+      "pendingReports": "Pending reports",
+      "totalReports": "Total reports",
+      "generatedDocsMonth": "Docs this month",
+      "robot": "Robot"
+    },
+    "latestRobot": {
+      "title": "Latest Robot Run",
+      "description": "Status and results of the last generation",
+      "processed": "Processed",
+      "generated": "Generated",
+      "errors": "Errors",
+      "viewAll": "All robot runs",
+      "none": "No runs yet"
+    },
+    "alerts": {
+      "title": "Needs Attention",
+      "description": "Items awaiting admin action",
+      "incompleteProfiles": "Incomplete profiles",
+      "pendingPublications": "Publications pending review",
+      "pendingReports": "Reports pending review",
+      "kkkIncomplete": "Not KKK-ready (<80%)",
+      "allClear": "All clear — no urgent tasks"
+    },
+    "topTeachers": {
+      "title": "Top 5 Active Teachers",
+      "description": "By number of actions in the last 30 days",
+      "actions": "actions",
+      "empty": "No activity data"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "description": "Jump to key sections",
+      "publicationsReview": "Publications Review",
+      "kkkSubmissions": "KKK Submissions",
+      "teachers": "Teachers",
+      "templates": "Templates",
+      "robotRuns": "Robot Runs",
+      "statistics": "Full Analytics"
+    }
+  },
+  "statistics": {
+    "title": "Department Statistics",
+    "subtitle": "Detailed analytics across all metrics",
+    "noData": "No data",
+    "cards": {
+      "teachers": "Teachers",
+      "incompleteProfiles": "Incomplete profiles",
+      "publications": "Publications",
+      "reports": "Reports",
+      "pending": "Pending review",
+      "docsThisMonth": "Docs this month",
+      "robot": "Robot",
+      "approvedReports": "Approved reports",
+      "rejected": "Rejected",
+      "verifiedPublications": "Verified publications",
+      "outOf": "Out of",
+      "topActive": "Top active",
+      "kkkIncomplete": "KKK incomplete",
+      "profiles": "profiles"
+    },
+    "charts": {
+      "pubsByDatabase": "Publications by Database",
+      "pubsByDatabaseDesc": "All publications in the system",
+      "reportsByStatus": "Reports by Status",
+      "reportsByStatusDesc": "Distribution by status",
+      "kkkReadiness": "KKK Readiness by Teacher",
+      "kkkReadinessDesc": "Top 20, % portfolio completion",
+      "genDocsByMonth": "Generated Documents by Month",
+      "genDocsByMonthDesc": "Last 12 months"
+    },
+    "lastRobotRun": {
+      "title": "Last Robot Run",
+      "processed": "Processed",
+      "generated": "Generated",
+      "errors": "Errors",
+      "viewAll": "All robot runs",
+      "none": "No run data available"
+    },
+    "topTeachers": {
+      "title": "Top 5 Active Teachers",
+      "description": "By number of actions in the last 30 days",
+      "actions": "actions",
+      "empty": "No activity data (Activity table is empty)"
+    }
+  },
+  "admin": {
+    "passwordResets": {
+      "title": "Password Reset Requests",
+      "empty": "No requests",
+      "columns": {
+        "user": "User",
+        "reason": "Reason",
+        "requested": "Requested",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "tabs": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
+      "actions": {
+        "approve": "Approve",
+        "reject": "Reject"
+      },
+      "statuses": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "cancelled": "Cancelled"
+      },
+      "approveDialog": {
+        "title": "Approve password reset",
+        "description": "Choose how to set the new password.",
+        "customRadio": "Set custom password",
+        "generateRadio": "Generate random password",
+        "passwordLabel": "Custom password",
+        "submit": "Approve"
+      },
+      "rejectDialog": {
+        "title": "Reject request",
+        "reasonLabel": "Reason for rejection",
+        "submit": "Reject"
+      },
+      "success": {
+        "passwordCopied": "Password copied to clipboard",
+        "requestApproved": "Password reset approved",
+        "requestRejected": "Request rejected"
+      },
+      "warning": {
+        "shareSecurely": "Share this password with the user through a secure channel. It is shown only once."
+      }
+    },
+    "teachers": {
+      "resetPassword": {
+        "button": "Reset password",
+        "dialogTitle": "Reset user password",
+        "generateRadio": "Generate random password",
+        "customRadio": "Set custom password",
+        "passwordLabel": "Custom password",
+        "submit": "Reset password",
+        "success": "Password has been reset",
+        "warning": "Share this password with the user through a secure channel. It is shown only once."
+      }
+    }
+  },
+  "todayFocus": {
+    "aiBadge": "AI",
+    "stats": {
+      "deadlinesToday": "deadlines today",
+      "notifications": "unread notifications",
+      "returnedReports": "reports to fix"
+    },
+    "actions": {
+      "viewDeadlines": "Today's Deadlines",
+      "viewNotifications": "Notifications",
+      "fixReports": "Fix Reports",
+      "continueKkk": "KKK Profile"
+    }
+  },
+  "pinned": {
+    "title": "Pinned",
+    "edit": "Edit",
+    "done": "Done",
+    "empty": "No pinned items yet. Pin templates, publications, or pages for quick access.",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "pinned": "Pinned",
+    "unpinned": "Unpinned",
+    "maxReached": "Maximum 20 pinned items reached",
+    "pinThisPage": "Pin this page"
+  },
+  "publicProfile": {
+    "headerTitle": "Academic Portal",
+    "notFound": {
+      "title": "Profile not found",
+      "description": "This public profile does not exist or has been disabled."
+    },
+    "loginToSystem": "Login to system",
+    "about": "About",
+    "research": "Research Interests",
+    "onlineProfiles": "Online Profiles",
+    "publications": "Publications",
+    "education": "Education",
+    "qrCode": "QR Code",
+    "qrModalTitle": "QR Code",
+    "qrModalDescription": "Scan to share this profile",
+    "copy": "Copy link",
+    "copied": "Copied!",
+    "footerNote": "Academic Portal — Public Profile"
+  },
+  "templateRequests": {
+    "requestButton": "Request a Template",
+    "dialog": {
+      "title": "Request a New Template",
+      "titleLabel": "Template title",
+      "titlePlaceholder": "e.g. Annual teaching report form",
+      "descLabel": "Description",
+      "descPlaceholder": "Describe what this template should contain and what it will be used for...",
+      "categoryLabel": "Suggested category",
+      "categoryPlaceholder": "Select category (optional)",
+      "submit": "Send request",
+      "success": "Request submitted. The admin will review it soon."
+    },
+    "myList": {
+      "title": "My Template Requests",
+      "empty": "No requests yet. Use the 'Request a Template' button to submit one.",
+      "cancel": "Cancel",
+      "cancelSuccess": "Request cancelled.",
+      "adminSays": "Admin"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "admin": {
+      "title": "Template Requests",
+      "subtitle": "Review and respond to teacher template requests",
+      "empty": "No requests in this category",
+      "columns": {
+        "title": "Title",
+        "description": "Description",
+        "requestedBy": "Requested By",
+        "category": "Category",
+        "createdAt": "Created",
+        "status": "Status",
+        "adminResponse": "Admin Response"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "updateStatus": "Update Status",
+        "create": "Create Template",
+        "createFromRequest": "Create Template from Request",
+        "updateSuccess": "Status updated"
+      },
+      "statusUpdate": {
+        "dialog": "Update Request Status",
+        "statusLabel": "New status",
+        "responseLabel": "Response to teacher",
+        "responsePlaceholder": "Optional message to the teacher...",
+        "linkLabel": "Link to created template",
+        "linkPlaceholder": "Select template (optional)",
+        "submit": "Save"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+apiVersion: 1
+
+datasources:
+  - name: PostgreSQL
+    uid: postgres-ds
+    type: postgres
+    access: proxy
+    url: host.docker.internal:5432
+    database: task_app
+    user: postgres
+    secureJsonData:
+      password: "0000"  # совпадает с spring.datasource.password в application.yaml
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1700
+      timescaledb: false
+    editable: true

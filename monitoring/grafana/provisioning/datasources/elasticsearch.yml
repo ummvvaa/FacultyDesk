@@ -1,0 +1,34 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: elasticsearch
+  - name: Elasticsearch-Logss
+  - name: Elasticsearch-Metricss
+  - name: Elasticsearch-Logs
+  - name: Elasticsearch-Metrics
+
+datasources:
+  - name: Elasticsearch-Metrics
+    uid: es-metrics
+    type: elasticsearch
+    access: proxy
+    url: http://elasticsearch:9200
+    isDefault: true
+    jsonData:
+      index: "metrics-faculty*"
+      timeField: "@timestamp"
+      maxConcurrentShardRequests: 5
+    version: 2
+    editable: true
+
+  - name: Elasticsearch-Logs
+    uid: es-logs
+    type: elasticsearch
+    access: proxy
+    url: http://elasticsearch:9200
+    jsonData:
+      index: "faculty-logs-*"
+      timeField: "@timestamp"
+      maxConcurrentShardRequests: 5
+    version: 2
+    editable: true

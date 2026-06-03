@@ -1,0 +1,8 @@
+.env
+input/*.xlsx
+input/processed/
+output/
+robot.log
+__pycache__/
+*.pyc
+venv/

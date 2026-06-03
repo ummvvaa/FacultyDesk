@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .avatar {
+            display: block;
+            margin: 0 auto 15px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #007bff;
+        }
+        header {
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+        }
+        header .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        header a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/stats">Общая статистика</a>
+        <a th:href="@{'/stats/' + ${user.id}}">Личная статистика</a>
+        <a href="/search">Поиск</a>
+        <a href="/item">Все записи</a>
+        <a href="/record">Создать запись</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+<div class="container">
+    <div class="profile-container text-center">
+        <h3>Профиль</h3>
+        <img th:src="@{'/img/' + ${user.path}}" alt="avatar" class="avatar">
+        <p><strong>Имя пользователя:</strong> <span th:text="${user.username}"></span></p>
+        <p><strong>Дата регистрации:</strong> <span th:text="${user.createDate}"></span></p>
+
+        <form action="/me/avatar" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Сменить аватар</label>
+                <input type="file" class="form-control-file" id="file" name="file" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Обновить</button>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

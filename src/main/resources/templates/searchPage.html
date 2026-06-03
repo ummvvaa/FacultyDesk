@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { background-color: #f8f9fa; }
+        header { padding: 15px 0; background-color: #007bff; color: white; }
+        header .container { display: flex; justify-content: flex-end; }
+        header a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        header a:hover { text-decoration: underline; }
+        .record-card {
+            background: #fff; border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px; padding: 20px; margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .record-title { color: #007bff; margin-bottom: 10px; font-weight: 600; }
+        .record-meta { font-size: 14px; color: #6c757d; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <a href="/item">Категории</a>
+        <a href="/record">Создать запись</a>
+        <a href="/search">Поиск</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Поиск записей</h2>
+
+    <form method="get" action="/search" class="mb-4">
+        <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="Введите название отчёта..."
+                   name="q"
+                   th:value="${query}">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Искать</button>
+            </div>
+        </div>
+    </form>
+
+    <div th:if="${records != null and records.size() == 0}">
+        <p class="text-center mt-3">Ничего не найдено.</p>
+    </div>
+
+    <div th:each="record : ${records}" class="record-card">
+        <h5 th:text="${record.title}" class="record-title">Название</h5>
+        <p th:text="${record.description}">Описание</p>
+        <div class="record-meta">
+            Автор: <span th:text="${record.author.username}">Имя</span><br>
+            Дата: <span th:text="${#dates.format(record.createdAt, 'dd.MM.yyyy')}">Дата</span>
+        </div>
+
+        <div th:if="${record.pdf != null}">
+            <a th:href="@{'/pdf/' + ${record.pdf}}" class="btn btn-outline-primary btn-sm mt-2" target="_blank">
+                📄 Открыть PDF
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

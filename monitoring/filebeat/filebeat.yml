@@ -1,0 +1,17 @@
+filebeat.inputs:
+  - type: filestream
+    id: faculty-logs
+    paths:
+      - /app/logs/faculty-app.json
+    parsers:
+      - ndjson:
+          target: ""
+          overwrite_keys: true
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "faculty-logs-%{+yyyy.MM.dd}"
+
+# Disable template and ILM so filebeat does not push data_stream templates to ES
+setup.template.enabled: false
+setup.ilm.enabled: false

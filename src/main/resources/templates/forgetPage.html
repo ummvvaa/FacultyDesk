@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Логин</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .form-signin {
+            max-width: 380px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .wrapper {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .form-signin-heading,
+        .checkbox {
+            margin-bottom: 30px;
+        }
+        .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+        box-sizing(border-box);
+            margin-bottom: 20px;
+
+            &:focus {
+                z-index: 2;
+            }
+        }
+        .password {
+            position: relative;
+        }
+        .password-control {
+            position: absolute;
+            top: 11px;
+            right: 6px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(https://icons8.com/icon/vmqv135kp5Ty/eye) 0 0 no-repeat;
+
+        }
+        .password-control.view {
+
+        }
+
+        header {
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+        }
+        header .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        header a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body class="page-template-default page page-id-8">
+<header>
+    <div class="container">
+        <a href="login">Войти</a>
+        <a href="register">Регистрация</a>
+    </div>
+</header>
+<div class="wrapper" >
+    <form class="form-signin" action="/forget" method="POST">
+        <h2 class="form-signin-heading" style="text-align: center">Забыли свой пароль?</h2>
+        <label>
+            Введите адрес своей электронной почты для восстановления доступа
+            <input type="text" class="form-control" name="username" placeholder="username" required autofocus=""/>
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Восстановить доступ</button>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание записи</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-record {
+            max-width: 600px;
+            padding: 30px 40px 40px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .form-record h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-control {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        header {
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+        }
+        header .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        header a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/me">Профиль</a>
+        <a href="/item">Все записи</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="form-record">
+    <h2>Создать новую запись</h2>
+    <form id="recordForm" action="/items" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" class="form-control" placeholder="Введите заголовок" required>
+
+        <textarea name="description" class="form-control" rows="4" placeholder="Введите описание" required></textarea>
+        <select name="categoryId" class="form-control" required>
+            <option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}"></option>
+        </select>
+
+        <div class="form-group">
+            <label for="file">Прикрепить PDF-файл (необязательно):</label>
+            <input type="file" name="file" id="file" class="form-control-file" accept="application/pdf">
+        </div>
+
+        <button class="btn btn-primary btn-lg" type="submit">Создать запись</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('recordForm').addEventListener('submit', function (event) {
+        alert('Запись успешно отправлена!');
+    });
+</script>
+
+</body>
+</html>

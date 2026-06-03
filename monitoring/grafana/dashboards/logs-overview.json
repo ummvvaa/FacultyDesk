@@ -1,0 +1,161 @@
+{
+  "__inputs": [],
+  "__requires": [],
+  "annotations": { "list": [] },
+  "description": "Logs overview from faculty-logs-* index",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 },
+      "id": 1,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "{{level}}",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "3", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" },
+            { "field": "level.keyword", "id": "2", "settings": { "min_doc_count": "1", "order": "desc", "orderBy": "_term", "size": "10" }, "type": "terms" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+          "metrics": [{ "id": "1", "type": "count" }],
+          "query": "*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Логи по уровням",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 8 },
+      "id": 2,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [],
+          "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+          "metrics": [{ "id": "1", "type": "logs" }],
+          "query": "*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Поток логов",
+      "type": "logs"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+      "gridPos": { "h": 10, "w": 12, "x": 0, "y": 18 },
+      "id": 3,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [],
+          "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+          "metrics": [{ "id": "1", "type": "logs" }],
+          "query": "level:ERROR",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "Ошибки (ERROR)",
+      "type": "logs"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+      "gridPos": { "h": 10, "w": 12, "x": 12, "y": 18 },
+      "id": 4,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [],
+          "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+          "metrics": [{ "id": "1", "type": "logs" }],
+          "query": "logger_name:*Robot* OR message:*robot*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "События робота",
+      "type": "logs"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 28 },
+      "id": 5,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [],
+          "datasource": { "type": "elasticsearch", "uid": "es-logs" },
+          "metrics": [{ "id": "1", "type": "logs" }],
+          "query": "logger_name:*Groq* OR logger_name:*Assistant* OR logger_name:*Ai*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "AI вызовы",
+      "type": "logs"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["elasticsearch", "logs"],
+  "templating": { "list": [] },
+  "time": { "from": "now-24h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Logs Overview ES",
+  "uid": "faculty-logs-overview",
+  "version": 2
+}

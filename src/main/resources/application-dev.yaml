@@ -1,0 +1,18 @@
+# Альтернативная конфигурация для разработки
+# Используйте этот файл, если есть проблемы с PostgreSQL
+# Запуск: mvn spring-boot:run -Dspring-boot.run.profiles=dev
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/task_app
+    username: postgres
+    password: 0000
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+

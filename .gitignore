@@ -1,0 +1,72 @@
+# Java / Maven
+target/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env.local
+
+# Logs
+*.log
+logs/
+backend-error.log
+backend-run.log
+robot/robot.log
+
+# Robot
+robot/venv/
+robot/__pycache__/
+robot/*.pyc
+robot/input/*.xlsx
+robot/input/processed/
+robot/output/*.docx
+!robot/input/.gitkeep
+!robot/output/.gitkeep
+
+# Monitoring data
+monitoring/data/
+
+# Generated files (uploads)
+src/main/resources/static/files/
+src/main/resources/static/generated/
+src/main/resources/static/img/
+src/main/resources/static/pdf/
+src/main/resources/static/publications/
+src/main/resources/static/certificates/
+uploads/

@@ -1,0 +1,13 @@
+# Локальная конфигурация для тестирования
+# Используйте: mvn spring-boot:run -Dspring-boot.run.profiles=local
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/task_app
+    username: postgres
+    password: "0000"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

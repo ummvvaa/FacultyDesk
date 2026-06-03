@@ -1,0 +1,14 @@
+package org.example.fullstackpj.Entity.enums;
+
+public enum TemplateCategory {
+    TEACHING_WORKLOAD,
+    KKK_DOCUMENTS,
+    SCIENTIFIC_REPORTS,
+    SERVICE_NOTES,
+    PROTOCOLS,
+    PRACTICE_DOCUMENTS,
+    DIPLOMA_SUPERVISION,
+    QUALIFICATION_DOCUMENTS,
+    DEPARTMENT_FORMS,
+    OTHER
+}

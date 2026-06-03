@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${event.title}">Событие</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        header { padding: 15px 0; background-color: #007bff; color: white; }
+        header .container { display: flex; justify-content: flex-end; }
+        header a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        header a:hover { text-decoration: underline; }
+
+        .submission-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .muted { color: #6c757d; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/me">Профиль</a>
+        <a href="/item">Категории</a>
+        <a href="/record">Создать запись</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <h2 th:text="${event.title}">Событие</h2>
+    <p>🕒 Дедлайн:
+        <span th:text="${event.deadline != null ? #dates.format(event.deadline, 'dd.MM.yyyy') : '—'}">—</span>
+    </p>
+    <p th:text="${event.description}">Описание события</p>
+
+    <h4 class="mt-4">Мои отправки</h4>
+    <div th:if="${submissions == null or submissions.size() == 0}">
+        <p>Вы ещё не отправили отчёты на это событие.</p>
+    </div>
+    <div th:each="submission : ${submissions}" class="submission-card">
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <p class="mb-1">📄 <strong th:text="${submission.record != null ? submission.record.title : '—'}">Название отчёта</strong></p>
+                <p class="muted mb-1" th:text="${submission.record != null ? submission.record.description : ''}">Описание отчёта</p>
+                <p class="muted mb-0">Статус: <span th:text="${submission.status}">SUBMITTED</span></p>
+            </div>
+            <div class="text-right">
+                <div class="muted mb-2" th:text="${submission.submittedAt != null ? #dates.format(submission.submittedAt, 'dd.MM.yyyy') : ''}">Дата</div>
+                <form th:action="@{'/submissions/delete/' + ${submission.id}}" method="post" onsubmit="return confirm('Удалить отправку?');">
+                    <button class="btn btn-danger btn-sm">Удалить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-4">Отправить отчёт</h4>
+
+    <form th:action="@{'/submissions/submit/' + ${event.id}}" method="post">
+        <div class="form-group">
+            <label for="recordSelect">Выберите отчёт</label>
+            <select class="form-control" id="recordSelect" name="recordId" required>
+                <option value="" disabled selected>— Выберите отчёт —</option>
+                <option th:each="record : ${userRecords}"
+                        th:value="${record.id}"
+                        th:text="${record.title}">Отчёт</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary">Отправить</button>
+    </form>
+
+</div>
+
+</body>
+</html>

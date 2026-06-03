@@ -1,0 +1,136 @@
+{
+  "__inputs": [],
+  "__requires": [],
+  "annotations": { "list": [] },
+  "description": "AI endpoints monitoring via HTTP metrics (uri:*ai*)",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "gridPos": { "h": 3, "w": 24, "x": 0, "y": 0 },
+      "id": 10,
+      "options": {
+        "content": "## AI Monitoring\nAI-активность отслеживается через HTTP-метрики endpoints `/api/ai/*`. Для появления данных сделайте AI-запрос в приложении.",
+        "mode": "markdown"
+      },
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 3 },
+      "id": 1,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "AI requests",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "count", "id": "1", "type": "max" }],
+          "query": "name:\"http_server_requests\" AND uri:*ai*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "AI запросы (count)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 3 },
+      "id": 2,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "{{uri}}",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "3", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" },
+            { "field": "uri", "id": "2", "settings": { "min_doc_count": "1", "order": "desc", "orderBy": "_term", "size": "10" }, "type": "terms" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "count", "id": "1", "type": "max" }],
+          "query": "name:\"http_server_requests\" AND uri:*ai*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "AI запросы по endpoint (uri)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" }, "custom": { "lineWidth": 2 }, "unit": "ms" },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 11 },
+      "id": 3,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "alias": "AI mean response",
+          "bucketAggs": [
+            { "field": "@timestamp", "id": "2", "settings": { "interval": "auto", "min_doc_count": "0", "trimEdges": "0" }, "type": "date_histogram" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "mean", "id": "1", "type": "avg" }],
+          "query": "name:\"http_server_requests\" AND uri:*ai*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "AI время ответа (mean, ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+      "fieldConfig": {
+        "defaults": { "color": { "mode": "palette-classic" } },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 11 },
+      "id": 4,
+      "options": { "legend": { "calcs": [], "displayMode": "list", "placement": "right" }, "tooltip": { "mode": "single" } },
+      "targets": [
+        {
+          "alias": "{{status}}",
+          "bucketAggs": [
+            { "field": "status", "id": "2", "settings": { "min_doc_count": "1", "order": "desc", "orderBy": "_term", "size": "10" }, "type": "terms" }
+          ],
+          "datasource": { "type": "elasticsearch", "uid": "es-metrics" },
+          "metrics": [{ "field": "count", "id": "1", "type": "max" }],
+          "query": "name:\"http_server_requests\" AND uri:*ai*",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "title": "AI статусы ответов",
+      "type": "piechart"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["elasticsearch", "ai"],
+  "templating": { "list": [] },
+  "time": { "from": "now-24h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "AI Monitoring ES",
+  "uid": "ai-monitoring-es",
+  "version": 2
+}

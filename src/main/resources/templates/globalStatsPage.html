@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глобальная статистика</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { background-color: #f8f9fa; }
+        header { padding: 15px 0; background-color: #007bff; color: white; }
+        header .container { display: flex; justify-content: flex-end; }
+        header a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        header a:hover { text-decoration: underline; }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.25s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        }
+
+        .stat-title { font-size: 18px; font-weight: 600; color: #007bff; margin-bottom: 10px; }
+        .stat-value { font-size: 24px; font-weight: 700; color: #343a40; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/me">Профиль</a>
+        <a href="/item">Категории</a>
+        <a href="/record">Создать запись</a>
+        <a href="/favorites">Избранное</a>
+        <a href="/logout">Выйти</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Глобальная статистика</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="stat-card">
+                <div class="stat-title">Пользователи</div>
+                <div class="stat-value" th:text="${stats.usersCount}">0</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card">
+                <div class="stat-title">Категории</div>
+                <div class="stat-value" th:text="${stats.categoriesCount}">0</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card">
+                <div class="stat-title">Всего записей</div>
+                <div class="stat-value" th:text="${stats.recordsCount}">0</div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-4 mb-3">Топ авторов</h4>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4" th:each="a : ${stats.topAuthors}">
+            <div class="stat-card">
+                <div class="stat-title"> <span th:text="${a[0]}"></span></div>
+                <div class="stat-value" th:text="${a[1]}"></div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-4 mb-3">Топ категорий</h4>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4" th:each="c : ${stats.topCategories}">
+            <div class="stat-card">
+                <div class="stat-title"><span th:text="${c[0]}"></span></div>
+                <div class="stat-value" th:text="${c[1]}"></div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-4 mb-3">Активность по дням</h4>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4" th:each="d : ${stats.activityByDay}">
+            <div class="stat-card">
+                <div class="stat-title" th:text="${#dates.format(d[0], 'dd.MM.yyyy')}">Дата</div>
+                <div class="stat-value" th:text="${d[1]}">0</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
